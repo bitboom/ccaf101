@@ -10,10 +10,11 @@ Claude Certified Architect - Foundations(CCAF) 시험을 준비하기 위한 한
 - [도메인 1: 에이전트 아키텍처 및 오케스트레이션](domains/01-agent-architecture-and-orchestration.md)
 - [도메인 2: 도구 설계 및 MCP 통합](domains/02-tool-design-and-mcp-integration.md)
 - [도메인 3: Claude Code 구성 및 워크플로](domains/03-claude-code-configuration-and-workflows.md)
+- [도메인 4: Prompt 엔지니어링 및 구조화된 출력](domains/04-prompt-engineering-and-structured-output.md)
 - [도메인 5: 문맥 관리 및 신뢰성](domains/05-context-management-and-reliability.md)
 
 ## 사용 방식
 
 - 처음 보는 경우에는 시험 개요부터 읽는 편이 좋습니다.
 - 이후에는 도메인 문서를 시험 비중 순서대로 읽으면 됩니다.
-- 현재 저장소에는 도메인 4 문서가 아직 포함되어 있지 않습니다.
+- 시나리오 5, 6 대비가 필요하면 도메인 4를 도메인 5와 함께 묶어서 보는 편이 좋습니다.
