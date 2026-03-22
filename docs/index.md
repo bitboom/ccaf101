@@ -53,7 +53,7 @@ CCAF Foundations의 출제 구조와 도메인별 판단 포인트를 빠르게 
 
 ## 인포그래픽 미리보기
 
-빠르게 훑어볼 수 있도록 시험 개요와 도메인별 요약 인포그래픽을 함께 둡니다. 카드를 누르면 원본 PNG가 새 탭에서 열립니다.
+인포그래픽은 빠른 복습을 위한 보조 요약 자료입니다. 일부 표현과 표기는 순차적으로 다듬고 있습니다. 카드를 누르면 원본 PNG가 새 탭에서 열립니다.
 
 <div class="home-thumb-grid">
   <a class="home-thumb" href="assets/images/infographics/00-overview.png" target="_blank" rel="noopener">
