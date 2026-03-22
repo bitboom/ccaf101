@@ -17,11 +17,11 @@
     <span>시험 구조, 시나리오, 도메인 비중, 준비 우선순위를 먼저 정리합니다.</span>
   </a>
   <a class="home-card" href="domains/01-agent-architecture-and-orchestration/">
-    <strong>Domain 1</strong>
+    <strong>도메인 1</strong>
     <span>가장 비중이 큰 영역입니다. 에이전트 루프와 오케스트레이션부터 잡는 편이 좋습니다.</span>
   </a>
   <a class="home-card" href="domains/03-claude-code-configuration-and-workflows/">
-    <strong>Domain 3</strong>
+    <strong>도메인 3</strong>
     <span>Claude Code 운영 방식과 팀 워크플로 관점에서 자주 헷갈리는 포인트를 다룹니다.</span>
   </a>
 </div>
@@ -31,11 +31,11 @@
 <div class="home-grid">
   <a class="home-card" href="domains/01-agent-architecture-and-orchestration/">
     <strong>D1. 에이전트 아키텍처</strong>
-    <span>27% · agent loop, hooks, task orchestration, fork_session</span>
+    <span>27% · 에이전트 루프, 훅, 태스크 오케스트레이션, `fork_session`</span>
   </a>
   <a class="home-card" href="domains/02-tool-design-and-mcp-integration/">
     <strong>D2. 도구 설계와 MCP</strong>
-    <span>18% · tool description, MCP, tool routing, error handling</span>
+    <span>18% · 도구 설명, MCP, 도구 선택, 에러 처리</span>
   </a>
   <a class="home-card" href="domains/03-claude-code-configuration-and-workflows/">
     <strong>D3. Claude Code 워크플로</strong>
@@ -43,11 +43,11 @@
   </a>
   <a class="home-card" href="domains/04-prompt-engineering-and-structured-output/">
     <strong>D4. 구조화된 출력</strong>
-    <span>20% · schema reliability, few-shot, validation loops, batch processing</span>
+    <span>20% · 스키마 신뢰성, few-shot 예시, 검증 루프, batch 처리</span>
   </a>
   <a class="home-card" href="domains/05-context-management-and-reliability/">
     <strong>D5. 문맥 관리와 신뢰성</strong>
-    <span>15% · context compression, source mapping, escalation, scratchpads</span>
+    <span>15% · 문맥 압축, 출처 매핑, 에스컬레이션, 스크래치패드</span>
   </a>
 </div>
 
