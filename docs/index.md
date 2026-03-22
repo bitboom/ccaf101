@@ -51,6 +51,43 @@ CCAF Foundations의 출제 구조와 도메인별 판단 포인트를 빠르게 
   </a>
 </div>
 
+## 인포그래픽 미리보기
+
+빠르게 훑어볼 수 있도록 시험 개요와 도메인별 요약 인포그래픽을 함께 둡니다. 카드를 누르면 원본 PNG가 새 탭에서 열립니다.
+
+<div class="home-thumb-grid">
+  <a class="home-thumb" href="assets/images/infographics/00-overview.png" target="_blank" rel="noopener">
+    <img src="assets/images/infographics/previews/00-overview.webp" alt="시험 개요 인포그래픽 미리보기" loading="lazy" />
+    <strong>시험 개요</strong>
+    <span>전체 구조와 우선순위를 한 장으로 정리한 요약본</span>
+  </a>
+  <a class="home-thumb" href="assets/images/infographics/01-agent-architecture.png" target="_blank" rel="noopener">
+    <img src="assets/images/infographics/previews/01-agent-architecture.webp" alt="도메인 1 인포그래픽 미리보기" loading="lazy" />
+    <strong>D1. 에이전트 아키텍처</strong>
+    <span>루프, 훅, 태스크 오케스트레이션 핵심 요약</span>
+  </a>
+  <a class="home-thumb" href="assets/images/infographics/02-tool-design-mcp.png" target="_blank" rel="noopener">
+    <img src="assets/images/infographics/previews/02-tool-design-mcp.webp" alt="도메인 2 인포그래픽 미리보기" loading="lazy" />
+    <strong>D2. 도구 설계와 MCP</strong>
+    <span>도구 설명, MCP, 에러 처리 판단 기준 요약</span>
+  </a>
+  <a class="home-thumb" href="assets/images/infographics/03-claude-code-workflows.png" target="_blank" rel="noopener">
+    <img src="assets/images/infographics/previews/03-claude-code-workflows.webp" alt="도메인 3 인포그래픽 미리보기" loading="lazy" />
+    <strong>D3. Claude Code 워크플로</strong>
+    <span>CLAUDE.md, rules, commands, plan mode 복습용 요약</span>
+  </a>
+  <a class="home-thumb" href="assets/images/infographics/04-structured-output.png" target="_blank" rel="noopener">
+    <img src="assets/images/infographics/previews/04-structured-output.webp" alt="도메인 4 인포그래픽 미리보기" loading="lazy" />
+    <strong>D4. 구조화된 출력</strong>
+    <span>few-shot, schema, batch, 검증 루프 핵심 정리</span>
+  </a>
+  <a class="home-thumb" href="assets/images/infographics/05-context-reliability.png" target="_blank" rel="noopener">
+    <img src="assets/images/infographics/previews/05-context-reliability.webp" alt="도메인 5 인포그래픽 미리보기" loading="lazy" />
+    <strong>D5. 문맥 관리와 신뢰성</strong>
+    <span>문맥 보존, 에스컬레이션, 출처 추적 요약</span>
+  </a>
+</div>
+
 ## 추천 읽기 순서
 
 1. [시험 개요](exam-overview.md)로 전체 시험 구조와 출제 시나리오를 먼저 잡습니다.

@@ -261,6 +261,62 @@ body,
   line-height: 1.6;
 }
 
+.home-thumb-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.home-thumb {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--ccaf-border);
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+  text-decoration: none;
+  transition:
+    transform 140ms ease,
+    box-shadow 140ms ease,
+    border-color 140ms ease;
+}
+
+.home-thumb:hover {
+  transform: translateY(-2px);
+  border-color: #8fc9c2;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+.home-thumb img {
+  display: block;
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  object-position: top center;
+  background: #f4f6f8;
+}
+
+.home-thumb strong,
+.home-thumb span {
+  display: block;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.home-thumb strong {
+  margin-top: 0.9rem;
+  margin-bottom: 0.35rem;
+  color: #0f172a;
+  font-size: 1rem;
+}
+
+.home-thumb span {
+  padding-bottom: 1rem;
+  color: var(--ccaf-muted);
+  line-height: 1.55;
+}
+
 @media screen and (max-width: 768px) {
   .wy-nav-content {
     padding: 1.4rem 1rem;
