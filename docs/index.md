@@ -17,12 +17,12 @@
     <span>시험 구조, 시나리오, 도메인 비중, 준비 우선순위를 먼저 정리합니다.</span>
   </a>
   <a class="home-card" href="domains/01-agent-architecture-and-orchestration/">
-    <strong>도메인 1</strong>
-    <span>가장 비중이 큰 영역입니다. 에이전트 루프와 오케스트레이션부터 잡는 편이 좋습니다.</span>
+    <strong>D1. 에이전트 아키텍처</strong>
+    <span>가장 비중이 큰 영역입니다. 에이전트 루프, 멀티 에이전트 구조, 훅 설계부터 먼저 잡는 편이 좋습니다.</span>
   </a>
   <a class="home-card" href="domains/03-claude-code-configuration-and-workflows/">
-    <strong>도메인 3</strong>
-    <span>Claude Code 운영 방식과 팀 워크플로 관점에서 자주 헷갈리는 포인트를 다룹니다.</span>
+    <strong>D3. Claude Code 워크플로</strong>
+    <span>Claude Code 운영 방식, 규칙 파일 구조, plan mode, 팀 워크플로에서 자주 헷갈리는 포인트를 다룹니다.</span>
   </a>
 </div>
 
