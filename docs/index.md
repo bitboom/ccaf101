@@ -1,20 +1,59 @@
-# CCAF 101
+<section class="home-hero">
+  <p class="eyebrow">CCAF STUDY NOTES</p>
+  <h1>CCAF 101</h1>
+  <p class="lead">
+    Claude Certified Architect - Foundations 시험을 준비하기 위한 한국어 학습 노트입니다.
+  </p>
+  <p>
+    공식 문서를 대체하려는 사이트가 아니라, 시험 구조와 도메인별 판단 포인트를 빠르게 복습하기 위한 정리본으로 구성했습니다.
+  </p>
+</section>
 
-Claude Certified Architect - Foundations(CCAF) 시험을 준비하기 위한 한국어 학습 노트 모음입니다.
+## 어디서 시작할지
 
-이 사이트는 공식 문서가 아니라 시험 구조, 핵심 개념, 도메인별 설계 포인트를 빠르게 복습하기 위한 정리본입니다.
+<div class="home-grid">
+  <a class="home-card" href="exam-overview/">
+    <strong>시험 개요</strong>
+    <span>시험 구조, 시나리오, 도메인 비중, 준비 우선순위를 먼저 정리합니다.</span>
+  </a>
+  <a class="home-card" href="domains/01-agent-architecture-and-orchestration/">
+    <strong>Domain 1</strong>
+    <span>가장 비중이 큰 영역입니다. 에이전트 루프와 오케스트레이션부터 잡는 편이 좋습니다.</span>
+  </a>
+  <a class="home-card" href="domains/03-claude-code-configuration-and-workflows/">
+    <strong>Domain 3</strong>
+    <span>Claude Code 운영 방식과 팀 워크플로 관점에서 자주 헷갈리는 포인트를 다룹니다.</span>
+  </a>
+</div>
 
-## 문서 구성
+## 도메인별 문서
 
-- [시험 개요](exam-overview.md)
-- [도메인 1: 에이전트 아키텍처 및 오케스트레이션](domains/01-agent-architecture-and-orchestration.md)
-- [도메인 2: 도구 설계 및 MCP 통합](domains/02-tool-design-and-mcp-integration.md)
-- [도메인 3: Claude Code 구성 및 워크플로](domains/03-claude-code-configuration-and-workflows.md)
-- [도메인 4: Prompt 엔지니어링 및 구조화된 출력](domains/04-prompt-engineering-and-structured-output.md)
-- [도메인 5: 문맥 관리 및 신뢰성](domains/05-context-management-and-reliability.md)
+<div class="home-grid">
+  <a class="home-card" href="domains/01-agent-architecture-and-orchestration/">
+    <strong>D1. 에이전트 아키텍처</strong>
+    <span>27% · agent loop, hooks, task orchestration, fork_session</span>
+  </a>
+  <a class="home-card" href="domains/02-tool-design-and-mcp-integration/">
+    <strong>D2. 도구 설계와 MCP</strong>
+    <span>18% · tool description, MCP, tool routing, error handling</span>
+  </a>
+  <a class="home-card" href="domains/03-claude-code-configuration-and-workflows/">
+    <strong>D3. Claude Code 워크플로</strong>
+    <span>20% · CLAUDE.md, rules, commands, plan mode, CI/CD</span>
+  </a>
+  <a class="home-card" href="domains/04-prompt-engineering-and-structured-output/">
+    <strong>D4. 구조화된 출력</strong>
+    <span>20% · schema reliability, few-shot, validation loops, batch processing</span>
+  </a>
+  <a class="home-card" href="domains/05-context-management-and-reliability/">
+    <strong>D5. 문맥 관리와 신뢰성</strong>
+    <span>15% · context compression, source mapping, escalation, scratchpads</span>
+  </a>
+</div>
 
-## 사용 방식
+## 추천 읽기 순서
 
-- 처음 보는 경우에는 시험 개요부터 읽는 편이 좋습니다.
-- 이후에는 도메인 문서를 시험 비중 순서대로 읽으면 됩니다.
-- 시나리오 5, 6 대비가 필요하면 도메인 4를 도메인 5와 함께 묶어서 보는 편이 좋습니다.
+1. [시험 개요](exam-overview.md)로 전체 시험 구조와 출제 시나리오를 먼저 잡습니다.
+2. [D1](domains/01-agent-architecture-and-orchestration.md)과 [D3](domains/03-claude-code-configuration-and-workflows.md)부터 읽어 가장 높은 비중 구간을 선점합니다.
+3. [D2](domains/02-tool-design-and-mcp-integration.md)를 이어서 읽고 도구 설계와 MCP 판단 기준을 붙입니다.
+4. [D4](domains/04-prompt-engineering-and-structured-output.md)와 [D5](domains/05-context-management-and-reliability.md)를 묶어 출력 신뢰성과 장기 실행 안정성을 같이 복습합니다.
