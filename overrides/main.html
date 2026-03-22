@@ -1,7 +1,0 @@
-{% extends "base.html" %}
-
-{% block repo %}
-  {%- if config.repo_url %}
-    <a href="{{ config.repo_url }}" class="icon icon-github">{{ config.repo_name }}</a>
-  {%- endif %}
-{% endblock %}
