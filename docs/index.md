@@ -5,7 +5,7 @@
     Claude Certified Architect - Foundations 시험을 준비하기 위한 한국어 학습 노트입니다.
   </p>
   <p>
-    공식 문서를 대체하려는 사이트가 아니라, 시험 구조와 도메인별 판단 포인트를 빠르게 복습하기 위한 정리본으로 구성했습니다.
+CCAF Foundations의 출제 구조와 도메인별 판단 포인트를 빠르게 복습할 수 있도록 정리했습니다.
   </p>
 </section>
 
