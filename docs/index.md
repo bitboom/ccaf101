@@ -57,3 +57,6 @@ CCAF Foundations의 출제 구조와 도메인별 판단 포인트를 빠르게 
 2. [D1](domains/01-agent-architecture-and-orchestration.md)과 [D3](domains/03-claude-code-configuration-and-workflows.md)부터 읽어 가장 높은 비중 구간을 선점합니다.
 3. [D2](domains/02-tool-design-and-mcp-integration.md)를 이어서 읽고 도구 설계와 MCP 판단 기준을 붙입니다.
 4. [D4](domains/04-prompt-engineering-and-structured-output.md)와 [D5](domains/05-context-management-and-reliability.md)를 묶어 출력 신뢰성과 장기 실행 안정성을 같이 복습합니다.
+
+!!! note "참고"
+    이 사이트의 내용은 AI를 활용해 번역하고 정리했습니다. 중요한 해석과 최종 판단은 공식 문서와 함께 다시 확인하는 것을 권장합니다.
