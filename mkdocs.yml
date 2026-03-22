@@ -1,0 +1,41 @@
+site_name: CCAF 101
+site_description: Claude Certified Architect - Foundations study notes
+site_url: https://bitboom.github.io/ccaf101/
+repo_url: https://github.com/bitboom/ccaf101
+repo_name: bitboom/ccaf101
+docs_dir: docs
+
+theme:
+  name: material
+  language: ko
+  features:
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: teal
+      accent: indigo
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+nav:
+  - Home: index.md
+  - Exam Overview: exam-overview.md
+  - Domains:
+      - Domain 1: domains/01-agent-architecture-and-orchestration.md
+      - Domain 2: domains/02-tool-design-and-mcp-integration.md
+      - Domain 3: domains/03-claude-code-configuration-and-workflows.md
+      - Domain 5: domains/05-context-management-and-reliability.md
