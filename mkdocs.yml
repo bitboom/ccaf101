@@ -6,18 +6,7 @@ repo_name: bitboom/ccaf101
 docs_dir: docs
 
 theme:
-  name: material
-  language: ko
-  features:
-    - navigation.sections
-    - navigation.top
-    - search.highlight
-    - search.suggest
-    - content.code.copy
-  palette:
-    - scheme: default
-      primary: teal
-      accent: indigo
+  name: readthedocs
 
 plugins:
   - search
@@ -35,8 +24,8 @@ nav:
   - Home: index.md
   - Exam Overview: exam-overview.md
   - Domains:
-      - Domain 1: domains/01-agent-architecture-and-orchestration.md
-      - Domain 2: domains/02-tool-design-and-mcp-integration.md
-      - Domain 3: domains/03-claude-code-configuration-and-workflows.md
-      - Domain 4: domains/04-prompt-engineering-and-structured-output.md
-      - Domain 5: domains/05-context-management-and-reliability.md
+      - D1. 에이전트 아키텍처: domains/01-agent-architecture-and-orchestration.md
+      - D2. 도구 설계와 MCP: domains/02-tool-design-and-mcp-integration.md
+      - D3. Claude Code 워크플로: domains/03-claude-code-configuration-and-workflows.md
+      - D4. 구조화된 출력: domains/04-prompt-engineering-and-structured-output.md
+      - D5. 문맥 관리와 신뢰성: domains/05-context-management-and-reliability.md
