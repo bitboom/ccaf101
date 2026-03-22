@@ -13,7 +13,14 @@
     {%- endif %}
     <li class="wy-breadcrumbs-aside">
       {%- if config.repo_url %}
-        <a href="{{ config.repo_url }}" class="icon icon-github">{{ config.repo_name }}</a>
+        <a
+          href="{{ config.repo_url }}"
+          class="repo-link-icon"
+          aria-label="GitHub repository"
+          title="GitHub repository"
+        >
+          <span class="fa fa-github" aria-hidden="true"></span>
+        </a>
       {%- endif %}
     </li>
   </ul>

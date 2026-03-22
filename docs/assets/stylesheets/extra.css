@@ -104,6 +104,41 @@ body,
   color: var(--ccaf-accent);
 }
 
+.repo-link-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+.wy-breadcrumbs-aside .repo-link-icon {
+  border: 1px solid var(--ccaf-border);
+  background: #fff;
+  color: var(--ccaf-accent-deep);
+}
+
+.wy-breadcrumbs-aside .repo-link-icon:hover {
+  border-color: #8fc9c2;
+  background: #f3fbf9;
+  color: var(--ccaf-accent);
+}
+
+.rst-versions .repo-link-icon {
+  width: 1.9rem;
+  height: 1.9rem;
+  color: #fcfcfc;
+  opacity: 0.9;
+}
+
+.rst-versions .repo-link-icon:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  opacity: 1;
+}
+
 .rst-content :not(pre) > code,
 .rst-content :not(pre) > tt {
   font-family: "IBM Plex Mono", monospace;
