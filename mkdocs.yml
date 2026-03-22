@@ -2,11 +2,12 @@ site_name: CCAF 101
 site_description: Claude Certified Architect - Foundations study notes
 site_url: https://bitboom.github.io/ccaf101/
 repo_url: https://github.com/bitboom/ccaf101
-repo_name: bitboom/ccaf101
+repo_name: github.com/bitboom/ccaf101
 docs_dir: docs
 
 theme:
   name: readthedocs
+  custom_dir: overrides
 
 plugins:
   - search
