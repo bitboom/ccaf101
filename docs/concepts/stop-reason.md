@@ -2,6 +2,9 @@
 
 > 이 문서는 CCAF Domain 1을 이해하기 위한 **개념 설명용 노트**다.  
 > 여기서는 `stop_reason`을 시험 용어가 아니라, **Claude API가 제공하는 실제 제어 신호**로 이해하는 데 초점을 둔다.
+>
+> 먼저 읽으면 좋은 순서:
+> **[Agent Loop](./agent-loop.md) → stop_reason → [tool_use](./tool-use.md)**
 
 ## `stop_reason`이란 무엇인가
 
