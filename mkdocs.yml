@@ -29,9 +29,6 @@ nav:
   - 시험 개요: exam-overview.md
   - 개념:
       - Agent Loop: concepts/agent-loop.md
-      - stop_reason: concepts/stop-reason.md
-      - tool_use: concepts/tool-use.md
-      - tool_result: concepts/tool-result.md
   - 도메인:
       - D1. 에이전트 아키텍처: domains/01-agent-architecture-and-orchestration.md
       - D2. 도구 설계와 MCP: domains/02-tool-design-and-mcp-integration.md
