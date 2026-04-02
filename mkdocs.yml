@@ -30,6 +30,7 @@ nav:
   - 개념:
       - Agent Loop: concepts/agent-loop.md
       - Coordinator / Subagent: concepts/coordinator-subagent.md
+      - Hooks & Enforcement: concepts/hooks-and-enforcement.md
   - 도메인:
       - D1. 에이전트 아키텍처: domains/01-agent-architecture-and-orchestration.md
       - D2. 도구 설계와 MCP: domains/02-tool-design-and-mcp-integration.md
