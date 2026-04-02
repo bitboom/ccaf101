@@ -25,13 +25,15 @@
 
 이 도메인의 출발점은 **Agent Loop**다. 에이전트가 한 번의 응답으로 끝나는 것이 아니라, 필요하면 도구를 호출하고 그 결과를 바탕으로 다시 판단하는 **반복 실행 구조**라는 감각을 먼저 잡아두면 좋다.
 
-특히 아래 세 개념은 함께 묶어서 이해하는 편이 좋다.
+특히 아래 개념 문서를 함께 묶어서 읽으면 흐름이 훨씬 잘 잡힌다.
 
-- **Agent Loop**: 완료될 때까지 판단과 실행을 반복하는 구조
-- **`stop_reason`**: 지금 계속할지, 여기서 종료할지를 알려주는 신호
-- **`tool_use`**: 모델이 시스템에 도구 실행을 요청하는 메커니즘
+- [**Agent Loop**](../concepts/agent-loop.md): 완료될 때까지 판단과 실행을 반복하는 구조
+- [**Coordinator / Subagent**](../concepts/coordinator-subagent.md): 허브-앤-스포크 멀티 에이전트 구조와 explicit context passing
+- [**Hooks & Enforcement**](../concepts/hooks-and-enforcement.md): 프롬프트 지시와 코드 수준 강제의 구분
+- [**Task Decomposition**](../concepts/task-decomposition.md): 작업을 어떤 경계로 나눌지 설계하는 방법
+- [**Session Management**](../concepts/session-management.md): 어떤 문맥을 이어가고 끊을지 판단하는 기준
 
-개념 설명은 별도 문서인 [Agent Loop](../concepts/agent-loop.md)에 정리해 두었다. 먼저 읽고 돌아오면, 뒤에 나오는 멀티 에이전트 구조, 훅, 태스크 분해, 세션 관리가 훨씬 덜 추상적으로 읽힌다.
+먼저 읽고 돌아오면, 뒤에 나오는 멀티 에이전트 구조, 훅, 태스크 분해, 세션 관리가 훨씬 덜 추상적으로 읽힌다.
 
 ---
 
@@ -86,6 +88,8 @@
 ---
 
 ## 1.2 — 멀티 에이전트: 허브-앤-스포크 구조
+
+> 관련 개념 문서: [Coordinator / Subagent](../concepts/coordinator-subagent.md)
 
 ### 기본 구조
 
@@ -201,6 +205,8 @@
 
 ## 1.4 — 규칙을 강제하는 법: 훅 vs 프롬프트
 
+> 관련 개념 문서: [Hooks & Enforcement](../concepts/hooks-and-enforcement.md)
+
 ### 이 시험에서 가장 많이 출제되는 개념
 
 지금부터는 "정보를 어떻게 전달할 것인가"가 아니라 "규칙을 어떻게 지키게 만들 것인가"로 초점이 바뀐다. 문맥 전달이 잘 되어도, 중요한 규칙을 오직 프롬프트에만 맡기면 시스템은 여전히 실패할 수 있다.
@@ -295,6 +301,8 @@
 
 ## 1.6 — 태스크를 어떻게 쪼갤 것인가
 
+> 관련 개념 문서: [Task Decomposition](../concepts/task-decomposition.md)
+
 ### 두 가지 분해 패턴
 
 태스크 분해(task decomposition)는 복잡한 작업을 관리 가능한 단위로 나누는 것이다. CCAF 시험에서는 두 가지 분해 패턴을 구분해야 한다.
@@ -338,6 +346,8 @@
 ---
 
 ## 1.7 — 세션 이어가기, 분기, 정리
+
+> 관련 개념 문서: [Session Management](../concepts/session-management.md)
 
 ### 세션 관련 주요 명령
 
