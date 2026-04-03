@@ -33,6 +33,11 @@ nav:
       - Hooks & Enforcement: concepts/hooks-and-enforcement.md
       - Task Decomposition: concepts/task-decomposition.md
       - Session Management: concepts/session-management.md
+      - Tool Interface Design: concepts/tool-interface-design.md
+      - Tool Selection & Disambiguation: concepts/tool-selection-and-disambiguation.md
+      - Structured Outputs & Error Design: concepts/structured-outputs-and-error-design.md
+      - MCP Integration: concepts/mcp-integration.md
+      - Tool Safety Boundaries: concepts/tool-safety-boundaries.md
   - 도메인:
       - D1. 에이전트 아키텍처: domains/01-agent-architecture-and-orchestration.md
       - D2. 도구 설계와 MCP: domains/02-tool-design-and-mcp-integration.md
