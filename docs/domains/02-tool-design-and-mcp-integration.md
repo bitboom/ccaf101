@@ -19,7 +19,38 @@
 
 ---
 
+## Domain 2 Concept Primer
+
+이 도메인은 단순히 “도구를 붙이는 법”을 묻지 않는다.  
+더 정확히는:
+
+- 도구가 모델에게 어떻게 보이는지
+- 여러 도구 사이 경계를 어떻게 나눌지
+- 결과와 에러를 어떻게 구조화할지
+- MCP로 그 도구들을 어떻게 연결할지
+- 어떤 capability를 어디까지 노출할지
+
+를 함께 묻는다.
+
+특히 아래 개념 문서를 같이 보면 흐름이 훨씬 잘 잡힌다.
+
+- [**Tool Interface Design**](../concepts/tool-interface-design.md): 개별 도구가 모델에게 어떻게 보이는가
+- [**Tool Selection & Disambiguation**](../concepts/tool-selection-and-disambiguation.md): 여러 도구 사이의 경계를 어떻게 나눌 것인가
+- [**Structured Outputs & Error Design**](../concepts/structured-outputs-and-error-design.md): 도구 결과를 다음 행동 신호로 어떻게 설계할 것인가
+- [**MCP Integration**](../concepts/mcp-integration.md): 도구 생태계를 런타임에 어떻게 일관되게 연결할 것인가
+- [**Tool Safety Boundaries**](../concepts/tool-safety-boundaries.md): 어떤 capability를 어떤 조건 아래 노출할 것인가
+
+즉 Domain 2의 핵심은:
+
+> **도구를 많이 붙이는 것이 아니라, 모델이 도구를 올바르게 이해하고 선택하고 해석하며 안전하게 쓰게 만드는 것**
+
+이다.
+
+---
+
 ## 2.1 — 도구 설명은 왜 이렇게 중요한가
+
+> 관련 개념 문서: [Tool Interface Design](../concepts/tool-interface-design.md)
 
 ### 도구 선택의 메커니즘
 
@@ -94,6 +125,8 @@
 ---
 
 ## 2.2 — 에러가 발생하면 에이전트에게 무엇을 알려줘야 하는가
+
+> 관련 개념 문서: [Structured Outputs & Error Design](../concepts/structured-outputs-and-error-design.md)
 
 ### 구조화된 에러 응답의 필요성
 
@@ -174,6 +207,8 @@ MCP 도구에서 에러를 통신할 때는 `isError` 플래그 패턴을 사용
 
 ## 2.3 — 에이전트에게 도구를 몇 개나 줘야 하는가
 
+> 관련 개념 문서: [Tool Selection & Disambiguation](../concepts/tool-selection-and-disambiguation.md), [Tool Safety Boundaries](../concepts/tool-safety-boundaries.md)
+
 ### 도구 수가 많으면 왜 문제인가
 
 직관적으로는 에이전트에게 더 많은 도구를 주면 더 다양한 작업을 할 수 있으므로 좋을 것 같다. 그러나 현실은 정반대다. **도구가 너무 많으면 선택의 정확도가 떨어진다.**
@@ -226,6 +261,8 @@ MCP 도구에서 에러를 통신할 때는 `isError` 플래그 패턴을 사용
 
 ## 2.4 — MCP 서버를 어떻게 설정하는가
 
+> 관련 개념 문서: [MCP Integration](../concepts/mcp-integration.md)
+
 ### 프로젝트 설정 vs 사용자 설정
 
 MCP 서버 설정은 두 가지 범위로 나뉜다. 이 구분은 시험에서 **직접적인 함정으로 등장**한다.
@@ -271,6 +308,8 @@ MCP Resources는 **읽기 전용 콘텐츠 카탈로그**를 에이전트에게 
 ---
 
 ## 2.5 — 빌트인 도구를 올바르게 선택하는 법
+
+> 관련 개념 문서: [Tool Interface Design](../concepts/tool-interface-design.md), [Tool Selection & Disambiguation](../concepts/tool-selection-and-disambiguation.md), [Tool Safety Boundaries](../concepts/tool-safety-boundaries.md)
 
 ### 6가지 빌트인 도구
 
