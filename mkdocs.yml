@@ -44,6 +44,12 @@ nav:
       - Coding Workflow Design: concepts/coding-workflow-design.md
       - Team Conventions & Reproducibility: concepts/team-conventions-and-reproducibility.md
       - CI, Guardrails & Review Boundaries: concepts/ci-guardrails-and-review-boundaries.md
+      - Structured Output as Contract: concepts/structured-output-as-contract.md
+      - Schema Design for Reliability: concepts/schema-design-for-reliability.md
+      - Few-shot Patterns for Output Consistency: concepts/few-shot-patterns-for-output-consistency.md
+      - Validation, Repair & Retry Loops: concepts/validation-repair-and-retry-loops.md
+      - Batch Generation Strategy: concepts/batch-generation-strategy.md
+      - Human-readable vs Machine-usable Outputs: concepts/human-readable-vs-machine-usable-outputs.md
   - 도메인:
       - D1. 에이전트 아키텍처: domains/01-agent-architecture-and-orchestration.md
       - D2. 도구 설계와 MCP: domains/02-tool-design-and-mcp-integration.md
