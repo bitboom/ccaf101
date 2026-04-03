@@ -50,6 +50,12 @@ nav:
       - Validation, Repair & Retry Loops: concepts/validation-repair-and-retry-loops.md
       - Batch Generation Strategy: concepts/batch-generation-strategy.md
       - Human-readable vs Machine-usable Outputs: concepts/human-readable-vs-machine-usable-outputs.md
+      - Context Lifecycle Management: concepts/context-lifecycle-management.md
+      - Compression Without Losing Meaning: concepts/compression-without-losing-meaning.md
+      - Source-grounded Context & Citation Fidelity: concepts/source-grounded-context-and-citation-fidelity.md
+      - Escalation & Handoff Boundaries: concepts/escalation-and-handoff-boundaries.md
+      - Scratchpads, Working Memory & External State: concepts/scratchpads-working-memory-and-external-state.md
+      - Reliability Patterns for Long-running Agents: concepts/reliability-patterns-for-long-running-agents.md
   - 도메인:
       - D1. 에이전트 아키텍처: domains/01-agent-architecture-and-orchestration.md
       - D2. 도구 설계와 MCP: domains/02-tool-design-and-mcp-integration.md
