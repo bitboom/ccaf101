@@ -38,6 +38,12 @@ nav:
       - Structured Outputs & Error Design: concepts/structured-outputs-and-error-design.md
       - MCP Integration: concepts/mcp-integration.md
       - Tool Safety Boundaries: concepts/tool-safety-boundaries.md
+      - CLAUDE.md & Instruction Hierarchy: concepts/claude-md-and-instruction-hierarchy.md
+      - Rules as Operational Memory: concepts/rules-as-operational-memory.md
+      - Plan Mode & Execution Control: concepts/plan-mode-and-execution-control.md
+      - Coding Workflow Design: concepts/coding-workflow-design.md
+      - Team Conventions & Reproducibility: concepts/team-conventions-and-reproducibility.md
+      - CI, Guardrails & Review Boundaries: concepts/ci-guardrails-and-review-boundaries.md
   - 도메인:
       - D1. 에이전트 아키텍처: domains/01-agent-architecture-and-orchestration.md
       - D2. 도구 설계와 MCP: domains/02-tool-design-and-mcp-integration.md
