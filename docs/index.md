@@ -95,5 +95,38 @@ CCAF Foundations의 출제 구조와 도메인별 판단 포인트를 빠르게 
 3. [D2](domains/02-tool-design-and-mcp-integration.md)를 이어서 읽고 도구 설계와 MCP 판단 기준을 붙입니다.
 4. [D4](domains/04-prompt-engineering-and-structured-output.md)와 [D5](domains/05-context-management-and-reliability.md)를 묶어 출력 신뢰성과 장기 실행 안정성을 같이 복습합니다.
 
+## Concept 허브를 같이 읽는 법
+
+이 사이트는 각 도메인 본문만 읽어도 되지만, **개념 문서(concepts)**를 같이 보면 같은 주제가 다른 도메인에서 어떻게 다시 등장하는지 훨씬 잘 보인다.
+
+추천 방식은 두 가지다.
+
+1. **도메인 우선 읽기**
+   - 먼저 Domain 본문을 읽고
+   - 각 장의 `Concept Primer`에서 연결된 개념 문서를 따라간다.
+   - 시험 직전에는 이 방식이 가장 빠르다.
+
+2. **개념 축으로 가로질러 읽기**
+   - 특정 판단 축을 중심으로 concepts를 연속해서 읽는다.
+   - 예: `Agent Loop → Coordinator / Subagent → Session Management`
+   - 예: `Tool Interface Design → Tool Selection & Disambiguation → Tool Safety Boundaries`
+   - 예: `Structured Output as Contract → Schema Design for Reliability → Validation, Repair & Retry Loops`
+   - 예: `Context Lifecycle Management → Source-grounded Context & Citation Fidelity → Reliability Patterns for Long-running Agents`
+
+짧게 말하면:
+> **도메인 문서는 시험 범위를 잡는 지도이고, concept 문서는 반복 출제되는 판단 축을 세우는 뼈대다.**
+
+## 이 사이트를 보는 추천 감각
+
+- **D1**은 전체 에이전트 구조를 잡는 뼈대
+- **D2**는 도구를 모델이 어떻게 이해하고 선택하게 만들지에 대한 인터페이스 설계
+- **D3**는 Claude Code를 운영 가능한 harness로 만드는 방법
+- **D4**는 출력 신뢰성을 계약과 검증 루프로 다루는 방법
+- **D5**는 장기 실행에서 문맥과 신뢰성을 유지하는 방법
+
+즉 이 다섯 개를 따로 외우기보다,
+> **아키텍처 → 도구 → 운영 워크플로 → 출력 계약 → 문맥 신뢰성**
+흐름으로 보면 훨씬 덜 헷갈린다.
+
 !!! note "참고"
     이 사이트의 내용은 AI를 활용해 번역하고 정리했습니다. 중요한 해석과 최종 판단은 공식 문서와 함께 다시 확인하는 것을 권장합니다.
