@@ -52,8 +52,8 @@ tags:
 
 5. **폐기되거나 다른 형태로 넘겨진다**
    - 직접 유지하지 않거나
-   - [[concepts/compression-without-losing-meaning|압축]]되거나
-   - [[concepts/scratchpads-working-memory-and-external-state|external state]]로 이동한다
+   - [[concepts/state-memory/compression-without-losing-meaning|압축]]되거나
+   - [[concepts/state-memory/scratchpads-working-memory-and-external-state|external state]]로 이동한다
 
 즉 context management는 단순 저장이 아니라,
 
@@ -102,7 +102,7 @@ tags:
 예:
 - 장황한 로그를 요약한 메모
 - 여러 도구 결과를 종합한 summary
-- 긴 논의를 [[concepts/compression-without-losing-meaning|압축]]한 checkpoint
+- 긴 논의를 [[concepts/state-memory/compression-without-losing-meaning|압축]]한 checkpoint
 - 파일 여러 개를 읽고 정리한 design note
 
 이런 것은 **derived context**다.
@@ -123,7 +123,7 @@ tags:
 에이전트는 단순히 “많이 아는” 상태가 아니라
 **낡은 전제를 붙잡은 채 계속 추론하는 상태**가 된다.
 
-그 결과 잘못된 결론, 잘못된 도구 선택, 불필요한 재작업, 오래된 결과를 기반으로 한 자신감 있는 오류가 생긴다. 이는 곧 [[concepts/reliability-patterns-for-long-running-agents|장기 실행 에이전트의 신뢰성]] 문제로 이어진다.
+그 결과 잘못된 결론, 잘못된 도구 선택, 불필요한 재작업, 오래된 결과를 기반으로 한 자신감 있는 오류가 생긴다. 이는 곧 [[concepts/execution-safety/reliability-patterns-for-long-running-agents|장기 실행 에이전트의 신뢰성]] 문제로 이어진다.
 
 즉 context lifecycle management의 핵심은 기억력보다,
 

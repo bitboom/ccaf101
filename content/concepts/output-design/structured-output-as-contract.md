@@ -48,7 +48,7 @@ tags:
 - 고객 영향은 boolean인가, severity인가?
 - 수정 필요는 recommendation인가, required action인가?
 
-반면 [[concepts/structured-outputs-and-error-design|structured output]]은 이런 해석 여지를 줄인다.
+반면 [[concepts/tool-design/structured-outputs-and-error-design|structured output]]은 이런 해석 여지를 줄인다.
 
 ```json
 {
@@ -101,7 +101,7 @@ structured output을 contract로 보는 순간,
 - 필드 누락을 늦게 발견한다
 - 값의 의미가 호출마다 흔들린다
 - 예외 처리가 복잡해진다
-- [[concepts/validation-repair-and-retry-loops|validation과 repair]]가 어려워진다
+- [[concepts/execution-safety/validation-repair-and-retry-loops|validation과 repair]]가 어려워진다
 
 즉 output contract가 약하면,
 문제는 “예쁘지 않음”이 아니라,
@@ -165,11 +165,11 @@ schema는 중요한데, 그보다 먼저:
 를 이해해야 한다.
 
 이걸 먼저 잡아야
-- [[concepts/schema-design-for-reliability|schema design]]
-- [[concepts/few-shot-patterns-for-output-consistency|few-shot consistency]]
-- [[concepts/validation-repair-and-retry-loops|validation / repair]]
-- [[concepts/batch-generation-strategy|batch generation]]
-- [[concepts/human-readable-vs-machine-usable-outputs|human vs machine output]]
+- [[concepts/output-design/schema-design-for-reliability|schema design]]
+- [[concepts/output-design/few-shot-patterns-for-output-consistency|few-shot consistency]]
+- [[concepts/execution-safety/validation-repair-and-retry-loops|validation / repair]]
+- [[concepts/output-design/batch-generation-strategy|batch generation]]
+- [[concepts/output-design/human-readable-vs-machine-usable-outputs|human vs machine output]]
 
 도 전부 같은 축으로 묶인다.
 

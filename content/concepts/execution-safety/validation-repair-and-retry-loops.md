@@ -12,7 +12,7 @@ tags:
 
 ## 왜 validation만으로는 충분하지 않은가
 
-모델 출력은 [[concepts/schema-design-for-reliability|스키마]]를 어길 수 있고, 필드를 누락할 수 있고, 형식은 맞지만 의미가 어긋날 수도 있다.
+모델 출력은 [[concepts/output-design/schema-design-for-reliability|스키마]]를 어길 수 있고, 필드를 누락할 수 있고, 형식은 맞지만 의미가 어긋날 수도 있다.
 
 이때 validation은 중요한 첫 단계다.  
 하지만 validation만 하고 실패를 끝내버리면,
@@ -41,7 +41,7 @@ validation은 보통 아래를 확인한다.
 
 즉 validation은 단순 파싱 검사가 아니라,
 
-> **출력이 [[concepts/structured-output-as-contract|계약]]을 지켰는지 확인하는 단계**
+> **출력이 [[concepts/output-design/structured-output-as-contract|계약]]을 지켰는지 확인하는 단계**
 
 다.
 
@@ -129,7 +129,7 @@ repair는 완전히 다시 생성하기 전에,
 
 에 가깝다.
 
-이게 바로 D4의 핵심 중 하나이며, [[concepts/reliability-patterns-for-long-running-agents|장기 실행 에이전트의 reliability 패턴]]과도 직결된다.
+이게 바로 D4의 핵심 중 하나이며, [[concepts/execution-safety/reliability-patterns-for-long-running-agents|장기 실행 에이전트의 reliability 패턴]]과도 직결된다.
 
 ---
 
@@ -137,7 +137,7 @@ repair는 완전히 다시 생성하기 전에,
 
 이 셋은 따로 떨어져 있지 않다.
 
-- [[concepts/schema-design-for-reliability|**schema**]]는 무엇이 유효한지 정의하고
+- [[concepts/output-design/schema-design-for-reliability|**schema**]]는 무엇이 유효한지 정의하고
 - **validation**은 실제 출력이 그 정의를 만족하는지 검사하고
 - **repair / retry**는 만족하지 못한 출력을 어떻게 다룰지 결정한다
 

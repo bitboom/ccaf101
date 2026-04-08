@@ -39,7 +39,7 @@ Claude Code의 행동은 모델 능력만으로 결정되지 않는다.
 - 저장소 전반에 적용되는 작업 원칙
 - 테스트 / 검증 습관
 - 특정 금지사항
-- [[concepts/team-conventions-and-reproducibility|팀 규약]]과 절차
+- [[concepts/execution-safety/team-conventions-and-reproducibility|팀 규약]]과 절차
 - 코드베이스를 다룰 때의 주의점
 
 이 담긴다.
@@ -103,7 +103,7 @@ Instruction hierarchy는 여러 규칙이 동시에 존재할 때,
 - 팀 기준을 실행 환경 안에 배치하고
 - 행동 편차를 줄이는 것
 
-과 연결된다. 여기서 규칙의 내용 자체를 어떻게 구성할지는 [[concepts/rules-as-operational-memory|Rules as Operational Memory]]에서, 규칙을 런타임에 강제하는 방법은 [[concepts/hooks-and-enforcement|Hooks & Enforcement]]에서 다룬다.
+과 연결된다. 여기서 규칙의 내용 자체를 어떻게 구성할지는 [[concepts/execution-safety/rules-as-operational-memory|Rules as Operational Memory]]에서, 규칙을 런타임에 강제하는 방법은 [[concepts/agent-control/hooks-and-enforcement|Hooks & Enforcement]]에서 다룬다.
 
 그래서 이 문맥에서 `CLAUDE.md`와 instruction hierarchy는,
 

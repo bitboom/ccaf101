@@ -15,7 +15,7 @@ tags:
 짧은 작업은 현재 문맥 창 안에서 충분히 다룰 수 있다.  
 하지만 긴 조사, 다단계 편집, 장기 실행 에이전트에서는 문제가 달라진다.
 
-시간이 길어질수록 이전 결정이 잊히고, 중간 산출물이 묻히고, 작업 목표가 [[concepts/reliability-patterns-for-long-running-agents|드리프트]]하고, [[concepts/context-lifecycle-management|stale]]한 기억과 최신 상태가 섞인다.
+시간이 길어질수록 이전 결정이 잊히고, 중간 산출물이 묻히고, 작업 목표가 [[concepts/execution-safety/reliability-patterns-for-long-running-agents|드리프트]]하고, [[concepts/state-memory/context-lifecycle-management|stale]]한 기억과 최신 상태가 섞인다.
 
 즉 모델 내부 문맥만으로 모든 상태를 들고 가려 하면,
 결국 신뢰성이 흔들리기 쉽다.
@@ -50,7 +50,7 @@ tags:
 - task manifest
 - checkpoint note
 - scratchpad
-- [[concepts/escalation-and-handoff-boundaries|handoff]] memo
+- [[concepts/execution-safety/escalation-and-handoff-boundaries|handoff]] memo
 
 이건 즉시성은 떨어질 수 있지만,
 장기 작업에서 더 안정적인 기준점이 된다.
@@ -98,7 +98,7 @@ scratchpad는 완성된 문서가 아니다.
 - 어떤 파일이나 문서를 확인했는지
 - 다음 세션이 어디서 다시 시작해야 하는지
 
-이런 것을 manifest나 progress file에 남기면, 다음 [[concepts/session-management|세션]]이나 다른 에이전트가 작업을 이어받기 쉬워진다.
+이런 것을 manifest나 progress file에 남기면, 다음 [[concepts/state-memory/session-management|세션]]이나 다른 에이전트가 작업을 이어받기 쉬워진다.
 
 즉 external state의 핵심은 저장 자체보다,
 
@@ -117,9 +117,9 @@ scratchpad는 완성된 문서가 아니다.
 - 핵심 결정
 - open question
 - 남은 TODO
-- 중요한 [[concepts/source-grounded-context-and-citation-fidelity|source pointer]]
+- 중요한 [[concepts/state-memory/source-grounded-context-and-citation-fidelity|source pointer]]
 - 최신 상태를 반영하는 checkpoint
-- [[concepts/escalation-and-handoff-boundaries|handoff]] 시 바로 필요한 사실
+- [[concepts/execution-safety/escalation-and-handoff-boundaries|handoff]] 시 바로 필요한 사실
 
 반대로 굳이 그대로 저장할 필요가 적은 것은:
 - 장황한 원본 transcript 전체

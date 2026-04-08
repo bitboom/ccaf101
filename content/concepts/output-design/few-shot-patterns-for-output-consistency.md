@@ -147,7 +147,7 @@ few-shot이 강력하다고 해서 만능은 아니다.
 
 ---
 
-## [[concepts/schema-design-for-reliability|schema]]와 few-shot은 어떻게 다르게 작동하는가
+## [[concepts/output-design/schema-design-for-reliability|schema]]와 few-shot은 어떻게 다르게 작동하는가
 
 이 둘은 비슷해 보여도 역할이 다르다.
 
@@ -176,7 +176,7 @@ few-shot이 강력하다고 해서 만능은 아니다.
 ### “예시는 많을수록 좋다”
 그렇지 않다. 너무 많으면 패턴이 흐려질 수 있다.
 
-### “[[concepts/schema-design-for-reliability|schema]]가 있으면 few-shot은 필요 없다”
+### “[[concepts/output-design/schema-design-for-reliability|schema]]가 있으면 few-shot은 필요 없다”
 아니다. schema가 구조를 잡아도, 표현 패턴 일관성은 예시가 더 잘 잡아줄 수 있다.
 
 ---

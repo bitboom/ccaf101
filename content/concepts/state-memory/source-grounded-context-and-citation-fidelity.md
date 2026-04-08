@@ -15,7 +15,7 @@ tags:
 문맥 안에 정보가 들어 있다고 해서,
 그 정보가 곧바로 신뢰 가능한 것은 아니다.
 
-특히 [[concepts/reliability-patterns-for-long-running-agents|장기 실행]]이나 다단계 [[concepts/compression-without-losing-meaning|요약]] 과정에서는:
+특히 [[concepts/execution-safety/reliability-patterns-for-long-running-agents|장기 실행]]이나 다단계 [[concepts/state-memory/compression-without-losing-meaning|요약]] 과정에서는:
 - 원문에서 가져온 사실인지
 - 누군가가 요약한 해석인지
 - 언제 확인한 정보인지
@@ -86,7 +86,7 @@ citation fidelity는
 - 원문 문서
 - 중간 요약
 - 의사결정 메모
-- [[concepts/escalation-and-handoff-boundaries|handoff]] summary
+- [[concepts/execution-safety/escalation-and-handoff-boundaries|handoff]] summary
 - 최종 응답
 
 이렇게 되면 나중에는 “이 결론이 어디서 왔지?”가 매우 중요해진다.
@@ -110,7 +110,7 @@ source mapping이 있으면:
 하지만 시간이 지나면:
 
 - 잘못 요약된 내용이 사실처럼 굳고
-- [[concepts/context-lifecycle-management|stale]]한 정보가 계속 재사용되고
+- [[concepts/state-memory/context-lifecycle-management|stale]]한 정보가 계속 재사용되고
 - 모순이 생겨도 검증 위치를 찾기 어렵고
 - 에이전트가 자신감 있게 틀릴 수 있다
 

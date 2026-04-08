@@ -12,7 +12,7 @@ tags:
 
 ## 왜 output design이 중요한가
 
-[[concepts/tool-interface-design|Tool interface design]]에서 많은 사람이 입력 인터페이스에만 집중한다.  
+[[concepts/tool-design/tool-interface-design|Tool interface design]]에서 많은 사람이 입력 인터페이스에만 집중한다.  
 하지만 실제 에이전트 품질은 **출력을 어떻게 돌려주느냐**에도 크게 좌우된다.
 
 도구 결과가 애매하면 모델은:
@@ -129,7 +129,7 @@ Structured output의 장점은 단순히 파싱이 쉽다는 데 있지 않다.
 - validation 실패 사유
 
 즉 좋은 output은 결과를 뿌리는 것이 아니라,
-**판단에 필요한 층위를 분리해서 반환하는 것**에 가깝다. 이런 구조 설계는 [[concepts/schema-design-for-reliability|Schema Design for Reliability]]와도 밀접하게 연결된다.
+**판단에 필요한 층위를 분리해서 반환하는 것**에 가깝다. 이런 구조 설계는 [[concepts/output-design/schema-design-for-reliability|Schema Design for Reliability]]와도 밀접하게 연결된다.
 
 ---
 
@@ -198,10 +198,10 @@ Structured output의 장점은 단순히 파싱이 쉽다는 데 있지 않다.
 - 승인 없는 상태 변경 요청
 - 정책상 금지된 작업
 
-이 경우는 재시도보다 **설명, 우회 경로, [[concepts/escalation-and-handoff-boundaries|에스컬레이션]]**이 더 적절할 수 있다.
+이 경우는 재시도보다 **설명, 우회 경로, [[concepts/execution-safety/escalation-and-handoff-boundaries|에스컬레이션]]**이 더 적절할 수 있다.
 
 즉 에러 카테고리는 개발자 편의가 아니라,
-**에이전트의 다음 행동 선택 품질**을 위한 설계다. 이 구분은 [[concepts/validation-repair-and-retry-loops|Validation, Repair & Retry Loops]]에서 재시도 전략을 정할 때 직접적으로 활용된다.
+**에이전트의 다음 행동 선택 품질**을 위한 설계다. 이 구분은 [[concepts/execution-safety/validation-repair-and-retry-loops|Validation, Repair & Retry Loops]]에서 재시도 전략을 정할 때 직접적으로 활용된다.
 
 ---
 
@@ -222,7 +222,7 @@ Structured output의 장점은 단순히 파싱이 쉽다는 데 있지 않다.
 - 다시 시도할지
 - 사용자에게 정정 요청할지
 - 다른 도구로 우회할지
-- [[concepts/escalation-and-handoff-boundaries|에스컬레이션]]할지
+- [[concepts/execution-safety/escalation-and-handoff-boundaries|에스컬레이션]]할지
 
 를 더 잘 고를 수 있다.
 

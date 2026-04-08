@@ -20,7 +20,7 @@ tags:
 - **Subagent**: 맡겨진 범위 안에서 실행하고, 결과나 오류를 반환한다
 
 즉 멀티 에이전트 구조의 핵심은 agent 수가 아니라,  
-**역할 분리와 책임 있는 재통합**이다. 이 구조는 [[concepts/agent-loop|Agent Loop]]를 역할별로 나눈 것으로 이해할 수 있다.
+**역할 분리와 책임 있는 재통합**이다. 이 구조는 [[concepts/agent-control/agent-loop|Agent Loop]]를 역할별로 나눈 것으로 이해할 수 있다.
 
 ---
 
@@ -202,7 +202,7 @@ Subagent는 가능하면 아래를 함께 반환해야 한다.
 - 결과를 보수적으로 종합할지
 결정할 수 있다.
 
-즉 structured error propagation도 멀티 에이전트 품질의 일부다. 이는 [[concepts/structured-outputs-and-error-design|Structured Outputs & Error Design]]과 직접 연결되는 주제다.
+즉 structured error propagation도 멀티 에이전트 품질의 일부다. 이는 [[concepts/tool-design/structured-outputs-and-error-design|Structured Outputs & Error Design]]과 직접 연결되는 주제다.
 
 ---
 
@@ -256,10 +256,10 @@ OpenClaw 같은 런타임에서도 핵심은 같다.
 
 ## 관련 개념
 
-- [[concepts/agent-loop|Agent Loop]] — coordinator와 subagent 모두 내부적으로 agent loop를 실행한다
-- [[concepts/task-decomposition|Task Decomposition]] — coordinator가 문제를 나누는 방법론
-- [[concepts/session-management|Session Management]] — 하위 세션 관리와 문맥 수명주기
-- [[concepts/escalation-and-handoff-boundaries|Escalation & Handoff Boundaries]] — subagent가 처리할 수 없는 문제의 상위 위임
+- [[concepts/agent-control/agent-loop|Agent Loop]] — coordinator와 subagent 모두 내부적으로 agent loop를 실행한다
+- [[concepts/agent-control/task-decomposition|Task Decomposition]] — coordinator가 문제를 나누는 방법론
+- [[concepts/state-memory/session-management|Session Management]] — 하위 세션 관리와 문맥 수명주기
+- [[concepts/execution-safety/escalation-and-handoff-boundaries|Escalation & Handoff Boundaries]] — subagent가 처리할 수 없는 문제의 상위 위임
 
 ## 더 읽어보기
 

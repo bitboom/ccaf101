@@ -12,7 +12,7 @@ tags:
 
 ## 왜 schema가 중요한가
 
-[[concepts/structured-output-as-contract|output contract]]를 실제로 작동하게 만들려면, 그 계약을 표현할 구조가 필요하다. 그 역할을 하는 것이 schema다.
+[[concepts/output-design/structured-output-as-contract|output contract]]를 실제로 작동하게 만들려면, 그 계약을 표현할 구조가 필요하다. 그 역할을 하는 것이 schema다.
 
 schema가 없으면 시스템은:
 - 무엇이 필수인지
@@ -151,9 +151,9 @@ required가 너무 많으면:
 ## 왜 schema design이 reliability와 직결되는가
 
 schema가 안정적이면:
-- [[concepts/validation-repair-and-retry-loops|validation]]이 명확해지고
+- [[concepts/execution-safety/validation-repair-and-retry-loops|validation]]이 명확해지고
 - repair logic도 단순해지고
-- [[concepts/batch-generation-strategy|batch processing]]도 쉬워지고
+- [[concepts/output-design/batch-generation-strategy|batch processing]]도 쉬워지고
 - downstream consumer가 예측 가능하게 동작한다
 
 반대로 schema가 애매하면,

@@ -132,7 +132,7 @@ least privilege의 핵심은:
 
 이 부분은 구분이 중요하다.
 
-- [[concepts/tool-selection-and-disambiguation|Tool selection]]은 여러 도구 중 무엇을 더 명확하게 고르게 할 것인가의 문제다
+- [[concepts/tool-design/tool-selection-and-disambiguation|Tool selection]]은 여러 도구 중 무엇을 더 명확하게 고르게 할 것인가의 문제다
 - tool safety boundary는 어떤 capability를 아예 노출하지 않거나, 더 강한 조건 아래 노출할 것인가의 문제다
 
 즉 둘 다 toolset을 다루지만,
@@ -162,7 +162,7 @@ least privilege의 핵심은:
 - 환불/결제는 강한 검증과 승인 필요
 - 외부 발송은 명시적 조건 충족 시에만 허용
 
-이런 통제는 [[concepts/hooks-and-enforcement|Hooks & Enforcement]]를 통해 런타임에서 자동 적용할 수도 있고, 위험 수준이 높으면 [[concepts/escalation-and-handoff-boundaries|에스컬레이션]]으로 사람에게 넘기는 설계도 필요하다.
+이런 통제는 [[concepts/agent-control/hooks-and-enforcement|Hooks & Enforcement]]를 통해 런타임에서 자동 적용할 수도 있고, 위험 수준이 높으면 [[concepts/execution-safety/escalation-and-handoff-boundaries|에스컬레이션]]으로 사람에게 넘기는 설계도 필요하다.
 
 즉 모든 도구를 같은 세기로 통제하는 것이 아니라,
 **위험 비례적 통제**가 중요하다.

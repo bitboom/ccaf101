@@ -12,7 +12,7 @@ tags:
 
 ## Session management란 무엇인가
 
-[[concepts/agent-loop|Agent Loop]]를 실행하는 에이전트 시스템에서 session은 단순한 채팅 기록이 아니다.  
+[[concepts/agent-control/agent-loop|Agent Loop]]를 실행하는 에이전트 시스템에서 session은 단순한 채팅 기록이 아니다.  
 실제로는:
 
 - 지금까지의 대화 맥락
@@ -163,7 +163,7 @@ stale tool result는 **관찰값의 노후화**에 가깝다.
 
 ### compact
 문맥을 완전히 버리지는 않되,
-핵심만 압축해 attention 부담을 줄이는 방식이다. [[concepts/compression-without-losing-meaning|Compression without Losing Meaning]]과 직접 관련된다.
+핵심만 압축해 attention 부담을 줄이는 방식이다. [[concepts/state-memory/compression-without-losing-meaning|Compression without Losing Meaning]]과 직접 관련된다.
 
 즉 compact는:
 
@@ -255,9 +255,9 @@ OpenClaw 같은 런타임에서 session management는 단순한 채팅 UX가 아
 
 ## 관련 개념
 
-- [[concepts/agent-loop|Agent Loop]]
-- [[concepts/coordinator-subagent|Coordinator / Subagent]]
-- [[concepts/task-decomposition|Task Decomposition]]
-- [[concepts/context-lifecycle-management|Context Lifecycle Management]] — 문맥 수명주기 전반
-- [[concepts/scratchpads-working-memory-and-external-state|Scratchpads & Working Memory]] — 세션 외부에 상태를 저장하는 패턴
-- [[concepts/reliability-patterns-for-long-running-agents|Reliability Patterns for Long-running Agents]] — 긴 세션의 신뢰성 유지
+- [[concepts/agent-control/agent-loop|Agent Loop]]
+- [[concepts/agent-control/coordinator-subagent|Coordinator / Subagent]]
+- [[concepts/agent-control/task-decomposition|Task Decomposition]]
+- [[concepts/state-memory/context-lifecycle-management|Context Lifecycle Management]] — 문맥 수명주기 전반
+- [[concepts/state-memory/scratchpads-working-memory-and-external-state|Scratchpads & Working Memory]] — 세션 외부에 상태를 저장하는 패턴
+- [[concepts/execution-safety/reliability-patterns-for-long-running-agents|Reliability Patterns for Long-running Agents]] — 긴 세션의 신뢰성 유지

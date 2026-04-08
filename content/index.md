@@ -27,46 +27,46 @@ Claude Certified Architect - Foundations 시험을 준비하기 위한 한국어
 
 ### Agent Control
 
-- [[concepts/agent-loop|Agent Loop]] — 완료될 때까지 판단과 실행을 반복하는 구조
-- [[concepts/coordinator-subagent|Coordinator / Subagent]] — 허브-앤-스포크 멀티 에이전트 구조
-- [[concepts/hooks-and-enforcement|Hooks & Enforcement]] — 프롬프트 지시 vs 코드 수준 강제
-- [[concepts/task-decomposition|Task Decomposition]] — 작업을 어떤 경계로 나눌지 설계하는 방법
-- [[concepts/plan-mode-and-execution-control|Plan Mode & Execution Control]] — 실행을 보류하고 먼저 정렬하는 시점
+- [[concepts/agent-control/agent-loop|Agent Loop]] — 완료될 때까지 판단과 실행을 반복하는 구조
+- [[concepts/agent-control/coordinator-subagent|Coordinator / Subagent]] — 허브-앤-스포크 멀티 에이전트 구조
+- [[concepts/agent-control/hooks-and-enforcement|Hooks & Enforcement]] — 프롬프트 지시 vs 코드 수준 강제
+- [[concepts/agent-control/task-decomposition|Task Decomposition]] — 작업을 어떤 경계로 나눌지 설계하는 방법
+- [[concepts/agent-control/plan-mode-and-execution-control|Plan Mode & Execution Control]] — 실행을 보류하고 먼저 정렬하는 시점
 
 ### Tool & Interface
 
-- [[concepts/tool-interface-design|Tool Interface Design]] — 모델이 도구를 이해하는 방식 설계
-- [[concepts/tool-selection-and-disambiguation|Tool Selection & Disambiguation]] — 여러 도구 사이 경계를 나누는 기준
-- [[concepts/tool-safety-boundaries|Tool Safety Boundaries]] — capability 노출 조건 설계
-- [[concepts/mcp-integration|MCP Integration]] — 도구 생태계를 런타임에 일관되게 연결
-- [[concepts/structured-outputs-and-error-design|Structured Outputs & Error Design]] — 도구 결과를 행동 신호로 설계
+- [[concepts/tool-design/tool-interface-design|Tool Interface Design]] — 모델이 도구를 이해하는 방식 설계
+- [[concepts/tool-design/tool-selection-and-disambiguation|Tool Selection & Disambiguation]] — 여러 도구 사이 경계를 나누는 기준
+- [[concepts/tool-design/tool-safety-boundaries|Tool Safety Boundaries]] — capability 노출 조건 설계
+- [[concepts/tool-design/mcp-integration|MCP Integration]] — 도구 생태계를 런타임에 일관되게 연결
+- [[concepts/tool-design/structured-outputs-and-error-design|Structured Outputs & Error Design]] — 도구 결과를 행동 신호로 설계
 
 ### State & Memory
 
-- [[concepts/session-management|Session Management]] — 문맥을 이어가고 끊을지 판단하는 기준
-- [[concepts/context-lifecycle-management|Context Lifecycle Management]] — 문맥의 생성·유지·폐기 흐름
-- [[concepts/compression-without-losing-meaning|Compression Without Losing Meaning]] — 정보 밀도를 유지하며 축약
-- [[concepts/source-grounded-context-and-citation-fidelity|Source-grounded Context & Citation Fidelity]] — 출처 기반 문맥과 인용 정확성
-- [[concepts/scratchpads-working-memory-and-external-state|Scratchpads, Working Memory & External State]] — 작업 메모리와 외부 상태 관리
+- [[concepts/state-memory/session-management|Session Management]] — 문맥을 이어가고 끊을지 판단하는 기준
+- [[concepts/state-memory/context-lifecycle-management|Context Lifecycle Management]] — 문맥의 생성·유지·폐기 흐름
+- [[concepts/state-memory/compression-without-losing-meaning|Compression Without Losing Meaning]] — 정보 밀도를 유지하며 축약
+- [[concepts/state-memory/source-grounded-context-and-citation-fidelity|Source-grounded Context & Citation Fidelity]] — 출처 기반 문맥과 인용 정확성
+- [[concepts/state-memory/scratchpads-working-memory-and-external-state|Scratchpads, Working Memory & External State]] — 작업 메모리와 외부 상태 관리
 
 ### Output Design
 
-- [[concepts/structured-output-as-contract|Structured Output as Contract]] — 출력을 계약으로 보는 관점
-- [[concepts/schema-design-for-reliability|Schema Design for Reliability]] — 스키마로 검증과 출력 유도를 동시에
-- [[concepts/few-shot-patterns-for-output-consistency|Few-shot Patterns for Output Consistency]] — 예시 설계로 출력 일관성 확보
-- [[concepts/batch-generation-strategy|Batch Generation Strategy]] — 처리량과 품질의 균형
-- [[concepts/human-readable-vs-machine-usable-outputs|Human-readable vs Machine-usable Outputs]] — 사람용 vs 시스템용 출력 구분
+- [[concepts/output-design/structured-output-as-contract|Structured Output as Contract]] — 출력을 계약으로 보는 관점
+- [[concepts/output-design/schema-design-for-reliability|Schema Design for Reliability]] — 스키마로 검증과 출력 유도를 동시에
+- [[concepts/output-design/few-shot-patterns-for-output-consistency|Few-shot Patterns for Output Consistency]] — 예시 설계로 출력 일관성 확보
+- [[concepts/output-design/batch-generation-strategy|Batch Generation Strategy]] — 처리량과 품질의 균형
+- [[concepts/output-design/human-readable-vs-machine-usable-outputs|Human-readable vs Machine-usable Outputs]] — 사람용 vs 시스템용 출력 구분
 
 ### Execution & Safety
 
-- [[concepts/validation-repair-and-retry-loops|Validation, Repair & Retry Loops]] — 출력 실패를 검증·복구·재생성으로 처리
-- [[concepts/reliability-patterns-for-long-running-agents|Reliability Patterns for Long-running Agents]] — 장기 실행 안정성 패턴
-- [[concepts/escalation-and-handoff-boundaries|Escalation & Handoff Boundaries]] — 에스컬레이션 시점과 인수인계 경계
-- [[concepts/ci-guardrails-and-review-boundaries|CI, Guardrails & Review Boundaries]] — 종료 조건과 신뢰 경계
-- [[concepts/rules-as-operational-memory|Rules as Operational Memory]] — 반복 판단을 규칙으로 외부화
-- [[concepts/team-conventions-and-reproducibility|Team Conventions & Reproducibility]] — 팀 일관성과 재현 가능성
-- [[concepts/coding-workflow-design|Coding Workflow Design]] — 읽기·계획·수정·검증·검토 루프
-- [[concepts/claude-md-and-instruction-hierarchy|CLAUDE.md & Instruction Hierarchy]] — 규칙 출처와 우선순위
+- [[concepts/execution-safety/validation-repair-and-retry-loops|Validation, Repair & Retry Loops]] — 출력 실패를 검증·복구·재생성으로 처리
+- [[concepts/execution-safety/reliability-patterns-for-long-running-agents|Reliability Patterns for Long-running Agents]] — 장기 실행 안정성 패턴
+- [[concepts/execution-safety/escalation-and-handoff-boundaries|Escalation & Handoff Boundaries]] — 에스컬레이션 시점과 인수인계 경계
+- [[concepts/execution-safety/ci-guardrails-and-review-boundaries|CI, Guardrails & Review Boundaries]] — 종료 조건과 신뢰 경계
+- [[concepts/execution-safety/rules-as-operational-memory|Rules as Operational Memory]] — 반복 판단을 규칙으로 외부화
+- [[concepts/execution-safety/team-conventions-and-reproducibility|Team Conventions & Reproducibility]] — 팀 일관성과 재현 가능성
+- [[concepts/execution-safety/coding-workflow-design|Coding Workflow Design]] — 읽기·계획·수정·검증·검토 루프
+- [[concepts/execution-safety/claude-md-and-instruction-hierarchy|CLAUDE.md & Instruction Hierarchy]] — 규칙 출처와 우선순위
 
 ## 추천 읽기 순서
 

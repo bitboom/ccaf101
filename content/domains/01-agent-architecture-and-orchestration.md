@@ -17,7 +17,7 @@ tags:
 
 시험 비중이 27%로 가장 높은 이유가 있다. 에이전트 아키텍처는 나머지 4개 도메인의 **기반**이기 때문이다. 도구 설계(D2)는 에이전트가 도구를 어떻게 사용하는지를, Claude Code 구성(D3)은 에이전트가 운영되는 환경을, 문맥 관리(D5)는 에이전트의 장기 실행을 각각 다룬다. 이 도메인에서 형성한 사고 모델이 전체 시험을 관통한다.
 
-이 장을 읽기 전에 [[concepts/agent-loop|Agent Loop]] 개념 문서를 먼저 보면, 뒤에 나오는 `stop_reason`, `tool_use`, 훅, 세션 관리가 훨씬 덜 추상적으로 읽힌다.
+이 장을 읽기 전에 [[concepts/agent-control/agent-loop|Agent Loop]] 개념 문서를 먼저 보면, 뒤에 나오는 `stop_reason`, `tool_use`, 훅, 세션 관리가 훨씬 덜 추상적으로 읽힌다.
 
 이 장을 읽을 때는 아래 세 질문을 계속 붙들고 가면 흐름이 잘 잡힌다.
 
@@ -33,11 +33,11 @@ tags:
 
 특히 아래 개념 문서를 함께 묶어서 읽으면 흐름이 훨씬 잘 잡힌다.
 
-- [[concepts/agent-loop|Agent Loop]]: 완료될 때까지 판단과 실행을 반복하는 구조
-- [[concepts/coordinator-subagent|Coordinator / Subagent]]: 허브-앤-스포크 멀티 에이전트 구조와 explicit context passing
-- [[concepts/hooks-and-enforcement|Hooks & Enforcement]]: 프롬프트 지시와 코드 수준 강제의 구분
-- [[concepts/task-decomposition|Task Decomposition]]: 작업을 어떤 경계로 나눌지 설계하는 방법
-- [[concepts/session-management|Session Management]]: 어떤 문맥을 이어가고 끊을지 판단하는 기준
+- [[concepts/agent-control/agent-loop|Agent Loop]]: 완료될 때까지 판단과 실행을 반복하는 구조
+- [[concepts/agent-control/coordinator-subagent|Coordinator / Subagent]]: 허브-앤-스포크 멀티 에이전트 구조와 explicit context passing
+- [[concepts/agent-control/hooks-and-enforcement|Hooks & Enforcement]]: 프롬프트 지시와 코드 수준 강제의 구분
+- [[concepts/agent-control/task-decomposition|Task Decomposition]]: 작업을 어떤 경계로 나눌지 설계하는 방법
+- [[concepts/state-memory/session-management|Session Management]]: 어떤 문맥을 이어가고 끊을지 판단하는 기준
 
 먼저 읽고 돌아오면, 뒤에 나오는 멀티 에이전트 구조, 훅, 태스크 분해, 세션 관리가 훨씬 덜 추상적으로 읽힌다.
 
@@ -95,7 +95,7 @@ tags:
 
 ## 1.2 — 멀티 에이전트: 허브-앤-스포크 구조
 
-> 관련 개념 문서: [[concepts/coordinator-subagent|Coordinator / Subagent]]
+> 관련 개념 문서: [[concepts/agent-control/coordinator-subagent|Coordinator / Subagent]]
 
 ### 기본 구조
 
@@ -211,7 +211,7 @@ tags:
 
 ## 1.4 — 규칙을 강제하는 법: 훅 vs 프롬프트
 
-> 관련 개념 문서: [[concepts/hooks-and-enforcement|Hooks & Enforcement]]
+> 관련 개념 문서: [[concepts/agent-control/hooks-and-enforcement|Hooks & Enforcement]]
 
 ### 이 시험에서 가장 많이 출제되는 개념
 
@@ -307,7 +307,7 @@ tags:
 
 ## 1.6 — 태스크를 어떻게 쪼갤 것인가
 
-> 관련 개념 문서: [[concepts/task-decomposition|Task Decomposition]]
+> 관련 개념 문서: [[concepts/agent-control/task-decomposition|Task Decomposition]]
 
 ### 두 가지 분해 패턴
 
@@ -353,7 +353,7 @@ tags:
 
 ## 1.7 — 세션 이어가기, 분기, 정리
 
-> 관련 개념 문서: [[concepts/session-management|Session Management]]
+> 관련 개념 문서: [[concepts/state-memory/session-management|Session Management]]
 
 ### 세션 관련 주요 명령
 

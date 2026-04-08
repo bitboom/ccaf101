@@ -37,12 +37,12 @@ Claude Code를 잘 쓴다는 것은 한 번 멋지게 수정하는 능력만을 
 
 1. **읽기 / 탐색**
    - 관련 파일, 구조, 의존성 파악
-2. **계획** ([[concepts/plan-mode-and-execution-control|Plan Mode]])
+2. **계획** ([[concepts/agent-control/plan-mode-and-execution-control|Plan Mode]])
    - 수정 전략과 영향 범위 정리
 3. **수정**
    - 작은 단위 또는 의도된 단위로 변경
 4. **검증**
-   - 테스트, lint, typecheck, 수동 확인 ([[concepts/ci-guardrails-and-review-boundaries|CI Guardrails]]와 연결)
+   - 테스트, lint, typecheck, 수동 확인 ([[concepts/execution-safety/ci-guardrails-and-review-boundaries|CI Guardrails]]와 연결)
 5. **검토**
    - diff 확인, 요구사항 재대조, 누락 점검
 
@@ -71,7 +71,7 @@ Claude Code를 잘 쓴다는 것은 한 번 멋지게 수정하는 능력만을 
 
 ### 큰 작업
 - 영향 범위가 넓다
-- 여러 파일이나 계층이 연결된다 ([[concepts/task-decomposition|Task Decomposition]]이 중요)
+- 여러 파일이나 계층이 연결된다 ([[concepts/agent-control/task-decomposition|Task Decomposition]]이 중요)
 - 요구사항 해석이 필요하다
 - 검증 루프가 길다
 - 중간 점검이 필요하다
@@ -138,7 +138,7 @@ Claude Code가 한 번에 큰 변경을 만들 수는 있다.
 그보다:
 - 읽는 단계가 있고
 - 수정 단위를 조절하고
-- 검증을 삽입하고 ([[concepts/hooks-and-enforcement|Hooks]]로 자동화 가능)
+- 검증을 삽입하고 ([[concepts/agent-control/hooks-and-enforcement|Hooks]]로 자동화 가능)
 - 검토와 반복을 가능하게 한다
 
 즉 coding workflow design은 사실상

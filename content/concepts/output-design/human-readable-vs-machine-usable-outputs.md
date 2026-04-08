@@ -31,7 +31,7 @@ tags:
 - 파서가 설명 텍스트에 흔들린다
 - 사람은 필요한 핵심 구조를 찾기 어렵다
 - 시스템은 표현의 다양성 때문에 불안정해진다
-- [[concepts/structured-output-as-contract|출력 계약]]이 흐려진다
+- [[concepts/output-design/structured-output-as-contract|출력 계약]]이 흐려진다
 
 예를 들어 JSON 안에 사람이 읽으라고 길게 쓴 산문이 지나치게 섞이면,
 기계 사용성과 가독성 둘 다 애매해질 수 있다.
@@ -103,10 +103,10 @@ tags:
 다음 상황에서는 사람 친화성보다 machine-usable output이 우선이다.
 
 - 후속 시스템 자동화가 있을 때
-- [[concepts/validation-repair-and-retry-loops|validation]]이 핵심일 때
-- [[concepts/batch-generation-strategy|대량 처리]]일 때
+- [[concepts/execution-safety/validation-repair-and-retry-loops|validation]]이 핵심일 때
+- [[concepts/output-design/batch-generation-strategy|대량 처리]]일 때
 - 구조화된 저장이 필요할 때
-- [[concepts/schema-design-for-reliability|schema 안정성]]과 consistency가 중요할 때
+- [[concepts/output-design/schema-design-for-reliability|schema 안정성]]과 consistency가 중요할 때
 
 반대로 사람이 최종 소비자이고,
 후속 시스템이 없거나 약하면 human-readable output 비중을 더 높일 수 있다.
@@ -126,7 +126,7 @@ tags:
 
 - 시스템은 파싱 실패 가능성이 커지고
 - 사람은 지나치게 기계적인 출력에 맥락을 잃고
-- [[concepts/structured-outputs-and-error-design|validation 기준]]도 애매해진다
+- [[concepts/tool-design/structured-outputs-and-error-design|validation 기준]]도 애매해진다
 
 즉 소비자에 맞는 표현 층을 나누는 것은 친절함 문제가 아니라,
 

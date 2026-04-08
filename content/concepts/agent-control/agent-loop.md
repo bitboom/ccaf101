@@ -336,9 +336,9 @@ Agent Loop를 이해하면 아래 같은 판단이 쉬워진다.
 즉 Agent Loop는 Domain 1의 출발점이면서,  
 뒤에 나오는 거의 모든 개념의 기반이 된다.
 
-- [[concepts/coordinator-subagent|Coordinator / Subagent]]는 **loop를 역할별로 나눈 것**
-- [[concepts/hooks-and-enforcement|Hooks]]는 **loop 중간에 개입하는 장치**
-- [[concepts/session-management|Session management]]는 **loop가 길어졌을 때 일관성을 유지하는 방식**
+- [[concepts/agent-control/coordinator-subagent|Coordinator / Subagent]]는 **loop를 역할별로 나눈 것**
+- [[concepts/agent-control/hooks-and-enforcement|Hooks]]는 **loop 중간에 개입하는 장치**
+- [[concepts/state-memory/session-management|Session management]]는 **loop가 길어졌을 때 일관성을 유지하는 방식**
 
 으로 이해할 수 있다.
 

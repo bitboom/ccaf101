@@ -12,7 +12,7 @@ tags:
 
 ## Tool interface란 무엇인가
 
-[[concepts/agent-loop|Agent Loop]]에서 에이전트에게 도구는 내부 구현보다 먼저 **이름, 설명, 입력 스키마**로 보인다.  
+[[concepts/agent-control/agent-loop|Agent Loop]]에서 에이전트에게 도구는 내부 구현보다 먼저 **이름, 설명, 입력 스키마**로 보인다.  
 즉 모델은 보통 도구의 소스코드를 읽고 판단하는 것이 아니라, 런타임이 노출한 인터페이스를 보고:
 
 - 이 도구가 무엇을 하는지
@@ -86,7 +86,7 @@ tags:
 을 함께 드러낸다.
 
 ### 3. 입력 스키마(schema)
-입력 필드의 이름과 구조는 모델이 실제 호출을 조립하는 데 직접 영향을 준다. [[concepts/schema-design-for-reliability|Schema Design for Reliability]]에서 더 깊이 다룬다.
+입력 필드의 이름과 구조는 모델이 실제 호출을 조립하는 데 직접 영향을 준다. [[concepts/output-design/schema-design-for-reliability|Schema Design for Reliability]]에서 더 깊이 다룬다.
 
 즉 schema는 단순 validation 장치가 아니라,
 
@@ -204,7 +204,7 @@ tags:
 
 ## 관련 개념
 
-- [[concepts/tool-selection-and-disambiguation|Tool Selection & Disambiguation]] — 도구 집합 전체의 경계 설계
-- [[concepts/schema-design-for-reliability|Schema Design for Reliability]] — 스키마 설계의 신뢰성
-- [[concepts/mcp-integration|MCP Integration]] — 표준화된 도구 인터페이스 프로토콜
-- [[concepts/structured-outputs-and-error-design|Structured Outputs & Error Design]] — 도구 결과의 구조화
+- [[concepts/tool-design/tool-selection-and-disambiguation|Tool Selection & Disambiguation]] — 도구 집합 전체의 경계 설계
+- [[concepts/output-design/schema-design-for-reliability|Schema Design for Reliability]] — 스키마 설계의 신뢰성
+- [[concepts/tool-design/mcp-integration|MCP Integration]] — 표준화된 도구 인터페이스 프로토콜
+- [[concepts/tool-design/structured-outputs-and-error-design|Structured Outputs & Error Design]] — 도구 결과의 구조화

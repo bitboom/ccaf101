@@ -12,7 +12,7 @@ tags:
 
 ## tool selection 문제는 왜 생기는가
 
-[[concepts/agent-loop|Agent Loop]]에서 모델은 종종 여러 도구 중 하나를 골라야 한다.  
+[[concepts/agent-control/agent-loop|Agent Loop]]에서 모델은 종종 여러 도구 중 하나를 골라야 한다.  
 이때 실패는 단순히 모델이 “멍청해서” 생기는 것이 아니다.
 
 실제로는:
@@ -190,6 +190,6 @@ Disambiguation은 여러 도구가 비슷해 보일 때,
 
 ## 관련 개념
 
-- [[concepts/tool-interface-design|Tool Interface Design]] — 개별 도구의 인터페이스 설계
-- [[concepts/mcp-integration|MCP Integration]] — 도구 집합 관리를 위한 프로토콜
-- [[concepts/tool-safety-boundaries|Tool Safety Boundaries]] — 도구 호출의 안전 경계
+- [[concepts/tool-design/tool-interface-design|Tool Interface Design]] — 개별 도구의 인터페이스 설계
+- [[concepts/tool-design/mcp-integration|MCP Integration]] — 도구 집합 관리를 위한 프로토콜
+- [[concepts/tool-design/tool-safety-boundaries|Tool Safety Boundaries]] — 도구 호출의 안전 경계

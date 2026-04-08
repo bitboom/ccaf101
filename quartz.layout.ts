@@ -37,7 +37,43 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      title: "색인",
+      folderDefaultState: "open",
+      folderClickBehavior: "collapse",
+      useSavedState: true,
+      mapFn: (node) => {
+        const ko: Record<string, string> = {
+          concepts: "개념",
+          domains: "도메인",
+          "agent-control": "에이전트 제어",
+          "tool-design": "도구 설계",
+          "state-memory": "상태와 메모리",
+          "output-design": "출력 설계",
+          "execution-safety": "실행과 안전",
+        }
+        if (ko[node.slugSegment]) node.displayName = ko[node.slugSegment]
+      },
+      sortFn: (a, b) => {
+        const folderOrder: Record<string, number> = {
+          domains: 0,
+          concepts: 1,
+          "agent-control": 0,
+          "tool-design": 1,
+          "state-memory": 2,
+          "output-design": 3,
+          "execution-safety": 4,
+        }
+        const ao = folderOrder[a.slugSegment] ?? 99
+        const bo = folderOrder[b.slugSegment] ?? 99
+        if (ao !== bo) return ao - bo
+        if (a.isFolder !== b.isFolder) return a.isFolder ? -1 : 1
+        return a.displayName.localeCompare(b.displayName, undefined, {
+          numeric: true,
+          sensitivity: "base",
+        })
+      },
+    }),
   ],
   right: [
     Component.Graph(),
@@ -61,7 +97,43 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      title: "색인",
+      folderDefaultState: "open",
+      folderClickBehavior: "collapse",
+      useSavedState: true,
+      mapFn: (node) => {
+        const ko: Record<string, string> = {
+          concepts: "개념",
+          domains: "도메인",
+          "agent-control": "에이전트 제어",
+          "tool-design": "도구 설계",
+          "state-memory": "상태와 메모리",
+          "output-design": "출력 설계",
+          "execution-safety": "실행과 안전",
+        }
+        if (ko[node.slugSegment]) node.displayName = ko[node.slugSegment]
+      },
+      sortFn: (a, b) => {
+        const folderOrder: Record<string, number> = {
+          domains: 0,
+          concepts: 1,
+          "agent-control": 0,
+          "tool-design": 1,
+          "state-memory": 2,
+          "output-design": 3,
+          "execution-safety": 4,
+        }
+        const ao = folderOrder[a.slugSegment] ?? 99
+        const bo = folderOrder[b.slugSegment] ?? 99
+        if (ao !== bo) return ao - bo
+        if (a.isFolder !== b.isFolder) return a.isFolder ? -1 : 1
+        return a.displayName.localeCompare(b.displayName, undefined, {
+          numeric: true,
+          sensitivity: "base",
+        })
+      },
+    }),
   ],
   right: [],
 }

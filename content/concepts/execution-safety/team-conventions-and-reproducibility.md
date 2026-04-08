@@ -15,7 +15,7 @@ tags:
 개인이 혼자 Claude Code를 쓸 때는 즉흥적으로 굴려도 된다.  
 하지만 팀 단위에서는 문제가 달라진다.
 
-- 사람마다 다른 [[concepts/claude-md-and-instruction-hierarchy|규칙 파일]]을 쓰고
+- 사람마다 다른 [[concepts/execution-safety/claude-md-and-instruction-hierarchy|규칙 파일]]을 쓰고
 - 수정 방식이 제각각이고
 - 테스트 습관이 다르고
 - 리뷰 기준이 들쭉날쭉하면
@@ -79,7 +79,7 @@ Claude Code 맥락에서는 보통 다음을 포함한다.
 ### 팀 설정
 - 저장소 전체에 적용해야 하는 규칙
 - 모두가 따라야 하는 검증 절차
-- 리뷰와 [[concepts/ci-guardrails-and-review-boundaries|CI]]에서 함께 기준으로 삼을 원칙
+- 리뷰와 [[concepts/execution-safety/ci-guardrails-and-review-boundaries|CI]]에서 함께 기준으로 삼을 원칙
 - 문서화되어 공유 가능한 작업 흐름
 
 핵심은:
@@ -116,7 +116,7 @@ Claude Code 맥락에서는 보통 다음을 포함한다.
 하니스는 개인 보조도구를 넘어,
 팀이 공통된 제약과 루프 안에서 작업하게 만드는 구조다.
 
-즉 팀 conventions와 reproducibility를 설계한다는 것은, 누가 실행해도 비슷한 규칙을 보고 비슷한 [[concepts/coding-workflow-design|작업 흐름]]을 따르며, 결과를 공통 기준으로 검토할 수 있게 만드는 것을 뜻한다.
+즉 팀 conventions와 reproducibility를 설계한다는 것은, 누가 실행해도 비슷한 규칙을 보고 비슷한 [[concepts/execution-safety/coding-workflow-design|작업 흐름]]을 따르며, 결과를 공통 기준으로 검토할 수 있게 만드는 것을 뜻한다.
 
 그래서 이 문맥에서 팀 규약은 단순 협업 가이드가 아니라,
 

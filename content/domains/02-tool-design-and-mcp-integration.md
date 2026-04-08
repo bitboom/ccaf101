@@ -40,11 +40,11 @@ tags:
 
 특히 아래 개념 문서를 같이 보면 흐름이 훨씬 잘 잡힌다.
 
-- [[concepts/tool-interface-design|Tool Interface Design]]: 개별 도구가 모델에게 어떻게 보이는가
-- [[concepts/tool-selection-and-disambiguation|Tool Selection & Disambiguation]]: 여러 도구 사이의 경계를 어떻게 나눌 것인가
-- [[concepts/structured-outputs-and-error-design|Structured Outputs & Error Design]]: 도구 결과를 다음 행동 신호로 어떻게 설계할 것인가
-- [[concepts/mcp-integration|MCP Integration]]: 도구 생태계를 런타임에 어떻게 일관되게 연결할 것인가
-- [[concepts/tool-safety-boundaries|Tool Safety Boundaries]]: 어떤 capability를 어떤 조건 아래 노출할 것인가
+- [[concepts/tool-design/tool-interface-design|Tool Interface Design]]: 개별 도구가 모델에게 어떻게 보이는가
+- [[concepts/tool-design/tool-selection-and-disambiguation|Tool Selection & Disambiguation]]: 여러 도구 사이의 경계를 어떻게 나눌 것인가
+- [[concepts/tool-design/structured-outputs-and-error-design|Structured Outputs & Error Design]]: 도구 결과를 다음 행동 신호로 어떻게 설계할 것인가
+- [[concepts/tool-design/mcp-integration|MCP Integration]]: 도구 생태계를 런타임에 어떻게 일관되게 연결할 것인가
+- [[concepts/tool-design/tool-safety-boundaries|Tool Safety Boundaries]]: 어떤 capability를 어떤 조건 아래 노출할 것인가
 
 즉 Domain 2의 핵심은:
 
@@ -56,7 +56,7 @@ tags:
 
 ## 2.1 — 도구 설명은 왜 이렇게 중요한가
 
-> 관련 개념 문서: [[concepts/tool-interface-design|Tool Interface Design]]
+> 관련 개념 문서: [[concepts/tool-design/tool-interface-design|Tool Interface Design]]
 
 ### 도구 선택의 메커니즘
 
@@ -132,7 +132,7 @@ tags:
 
 ## 2.2 — 에러가 발생하면 에이전트에게 무엇을 알려줘야 하는가
 
-> 관련 개념 문서: [[concepts/structured-outputs-and-error-design|Structured Outputs & Error Design]]
+> 관련 개념 문서: [[concepts/tool-design/structured-outputs-and-error-design|Structured Outputs & Error Design]]
 
 ### 구조화된 에러 응답의 필요성
 
@@ -213,7 +213,7 @@ MCP 도구에서 에러를 통신할 때는 `isError` 플래그 패턴을 사용
 
 ## 2.3 — 에이전트에게 도구를 몇 개나 줘야 하는가
 
-> 관련 개념 문서: [[concepts/tool-selection-and-disambiguation|Tool Selection & Disambiguation]], [[concepts/tool-safety-boundaries|Tool Safety Boundaries]]
+> 관련 개념 문서: [[concepts/tool-design/tool-selection-and-disambiguation|Tool Selection & Disambiguation]], [[concepts/tool-design/tool-safety-boundaries|Tool Safety Boundaries]]
 
 ### 도구 수가 많으면 왜 문제인가
 
@@ -267,7 +267,7 @@ MCP 도구에서 에러를 통신할 때는 `isError` 플래그 패턴을 사용
 
 ## 2.4 — MCP 서버를 어떻게 설정하는가
 
-> 관련 개념 문서: [[concepts/mcp-integration|MCP Integration]]
+> 관련 개념 문서: [[concepts/tool-design/mcp-integration|MCP Integration]]
 
 ### 프로젝트 설정 vs 사용자 설정
 
@@ -315,7 +315,7 @@ MCP Resources는 **읽기 전용 콘텐츠 카탈로그**를 에이전트에게 
 
 ## 2.5 — 빌트인 도구를 올바르게 선택하는 법
 
-> 관련 개념 문서: [[concepts/tool-interface-design|Tool Interface Design]], [[concepts/tool-selection-and-disambiguation|Tool Selection & Disambiguation]], [[concepts/tool-safety-boundaries|Tool Safety Boundaries]]
+> 관련 개념 문서: [[concepts/tool-design/tool-interface-design|Tool Interface Design]], [[concepts/tool-design/tool-selection-and-disambiguation|Tool Selection & Disambiguation]], [[concepts/tool-design/tool-safety-boundaries|Tool Safety Boundaries]]
 
 ### 6가지 빌트인 도구
 

@@ -18,7 +18,7 @@ tags:
 예를 들면:
 - 목표를 조금씩 잊어버림
 - 예전 결정을 최신 사실처럼 붙잡음
-- [[concepts/context-lifecycle-management|stale]] tool result를 계속 신뢰함
+- [[concepts/state-memory/context-lifecycle-management|stale]] tool result를 계속 신뢰함
 - 이미 해결한 문제를 다시 논의함
 - 중간에 생긴 예외 조건을 놓침
 
@@ -105,8 +105,8 @@ re-grounding은 에이전트가 다시
 - 파일을 다시 읽음
 - 최신 테스트를 다시 실행함
 - 현재 요구사항을 다시 확인함
-- [[concepts/scratchpads-working-memory-and-external-state|scratchpad / manifest]]를 기준으로 상태를 재동기화함
-- 요약 대신 [[concepts/source-grounded-context-and-citation-fidelity|원문 source]]를 다시 확인함
+- [[concepts/state-memory/scratchpads-working-memory-and-external-state|scratchpad / manifest]]를 기준으로 상태를 재동기화함
+- 요약 대신 [[concepts/state-memory/source-grounded-context-and-citation-fidelity|원문 source]]를 다시 확인함
 
 즉 re-grounding은 “처음부터 다시”가 아니라,
 
@@ -125,10 +125,10 @@ re-grounding은 에이전트가 다시
 
 - 주기적으로 목표를 재확인한다
 - stale 가능성이 큰 정보는 다시 조회한다
-- 중간 결과를 [[concepts/scratchpads-working-memory-and-external-state|external state]]에 남긴다
+- 중간 결과를 [[concepts/state-memory/scratchpads-working-memory-and-external-state|external state]]에 남긴다
 - checkpoint마다 방향을 다시 맞춘다
-- 불확실성이 커지면 [[concepts/escalation-and-handoff-boundaries|handoff]]를 고려한다
-- summary만 믿지 않고 [[concepts/source-grounded-context-and-citation-fidelity|source]]로 돌아갈 수 있다
+- 불확실성이 커지면 [[concepts/execution-safety/escalation-and-handoff-boundaries|handoff]]를 고려한다
+- summary만 믿지 않고 [[concepts/state-memory/source-grounded-context-and-citation-fidelity|source]]로 돌아갈 수 있다
 
 즉 long-running reliability의 핵심은
 한 번 똑똑하게 시작하는 것이 아니라,
@@ -142,11 +142,11 @@ re-grounding은 에이전트가 다시
 ## 왜 이게 D5의 마지막 문서로 좋나
 
 D5의 앞 문서들이:
-- [[concepts/context-lifecycle-management|lifecycle]]
-- [[concepts/compression-without-losing-meaning|compression]]
-- [[concepts/source-grounded-context-and-citation-fidelity|source fidelity]]
-- [[concepts/escalation-and-handoff-boundaries|handoff]]
-- [[concepts/scratchpads-working-memory-and-external-state|external state]]
+- [[concepts/state-memory/context-lifecycle-management|lifecycle]]
+- [[concepts/state-memory/compression-without-losing-meaning|compression]]
+- [[concepts/state-memory/source-grounded-context-and-citation-fidelity|source fidelity]]
+- [[concepts/execution-safety/escalation-and-handoff-boundaries|handoff]]
+- [[concepts/state-memory/scratchpads-working-memory-and-external-state|external state]]
 
 를 각각 다뤘다면,
 이 문서는 그것들을 하나의 장기 실행 패턴으로 다시 묶는다.

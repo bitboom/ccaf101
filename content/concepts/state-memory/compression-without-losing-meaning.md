@@ -8,11 +8,11 @@ tags:
 # Compression Without Losing Meaning
 
 > 이 문서는 CCAF Domain 5를 이해하기 위한 **개념 설명용 노트**다.  
-> 여기서는 [[concepts/context-lifecycle-management|문맥 수명주기]] 일반론보다, **문맥을 줄일 때 어떻게 다음 판단에 필요한 의미를 보존할 것인가**를 다룬다. 즉 compression을 단순 요약이 아니라, **semantic preservation 문제**로 이해하는 데 초점을 둔다.
+> 여기서는 [[concepts/state-memory/context-lifecycle-management|문맥 수명주기]] 일반론보다, **문맥을 줄일 때 어떻게 다음 판단에 필요한 의미를 보존할 것인가**를 다룬다. 즉 compression을 단순 요약이 아니라, **semantic preservation 문제**로 이해하는 데 초점을 둔다.
 
 ## 왜 compression이 필요한가
 
-[[concepts/reliability-patterns-for-long-running-agents|장기 실행]]이나 긴 대화, 큰 조사 작업에서는 문맥이 빠르게 비대해진다. 모든 것을 원문 그대로 유지하면 attention budget이 낭비되고, 중요한 정보가 묻히고, 현재 판단에 불필요한 세부사항이 계속 남는다.
+[[concepts/execution-safety/reliability-patterns-for-long-running-agents|장기 실행]]이나 긴 대화, 큰 조사 작업에서는 문맥이 빠르게 비대해진다. 모든 것을 원문 그대로 유지하면 attention budget이 낭비되고, 중요한 정보가 묻히고, 현재 판단에 불필요한 세부사항이 계속 남는다.
 
 즉 compression의 목적은 단순히 짧게 만드는 것이 아니라,
 
@@ -54,7 +54,7 @@ summary는 원본보다 짧고 편리하지만,
 - 원래의 불확실성이 단정처럼 바뀌고
 - 예외 조건이 빠질 수 있다
 
-즉 요약은 중립적 축약이 아니라 이미 한 번 해석된 결과일 수 있다. 이는 [[concepts/source-grounded-context-and-citation-fidelity|citation fidelity]]가 중요한 이유이기도 하다.
+즉 요약은 중립적 축약이 아니라 이미 한 번 해석된 결과일 수 있다. 이는 [[concepts/state-memory/source-grounded-context-and-citation-fidelity|citation fidelity]]가 중요한 이유이기도 하다.
 
 > summary는 유용하지만 동시에 **새로운 왜곡원**이 될 수도 있다.
 

@@ -19,7 +19,7 @@ Claude Code는 바로 수정에 들어갈 수도 있고,
 하지만 작업이 커지거나 위험이 커질수록, 바로 실행하는 방식은 다음 문제를 만들 수 있다.
 
 - 문제를 충분히 이해하기 전에 수정에 들어감
-- 변경 범위가 과도하게 커짐 ([[concepts/task-decomposition|Task Decomposition]] 부재)
+- 변경 범위가 과도하게 커짐 ([[concepts/agent-control/task-decomposition|Task Decomposition]] 부재)
 - 중요한 검증 단계를 빠뜨림
 - 사용자와 기대 결과가 어긋난 채 진행됨
 
@@ -95,7 +95,7 @@ plan mode는 단순히 “생각을 말해보기”가 아니다.
 
 ### 4. 단계적 진행이 필요할 때
 한 번에 다 밀기보다,
-계획 → 확인 → 실행 식으로 나눠 가는 편이 안정적인 작업이 있다. 이런 반복 루프 구조는 [[concepts/coding-workflow-design|Coding Workflow Design]]에서 더 구체적으로 다룬다.
+계획 → 확인 → 실행 식으로 나눠 가는 편이 안정적인 작업이 있다. 이런 반복 루프 구조는 [[concepts/execution-safety/coding-workflow-design|Coding Workflow Design]]에서 더 구체적으로 다룬다.
 
 즉 plan mode는 기능 소개가 아니라,
 
@@ -136,7 +136,7 @@ execution control은 단순히 “실행할지 말지”를 뜻하지 않는다.
 - 일정 조건이 충족되면 실행하게 하고
 - 필요한 경우 단계적으로 진행하게 한다
 
-이 구조는 [[concepts/agent-loop|Agent Loop]]의 반복 실행 모델과 맞닿아 있다. 즉 plan mode와 execution control은  
+이 구조는 [[concepts/agent-control/agent-loop|Agent Loop]]의 반복 실행 모델과 맞닿아 있다. 즉 plan mode와 execution control은  
 단순 기능이 아니라,
 
 > **Claude Code의 실행 정책(execution policy)**

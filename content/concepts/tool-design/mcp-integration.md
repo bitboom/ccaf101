@@ -108,14 +108,14 @@ MCP는 개별 도구 하나의 기능보다,
 
 MCP를 도구 품질 문제와 완전히 같은 것으로 보면 혼동이 생긴다.
 
-- [[concepts/tool-interface-design|Tool interface design]]은 개별 도구가 모델에게 어떻게 보이는지의 문제이고
-- [[concepts/tool-selection-and-disambiguation|Tool selection]]은 여러 도구 사이 경계를 어떻게 나누는지의 문제이며
+- [[concepts/tool-design/tool-interface-design|Tool interface design]]은 개별 도구가 모델에게 어떻게 보이는지의 문제이고
+- [[concepts/tool-design/tool-selection-and-disambiguation|Tool selection]]은 여러 도구 사이 경계를 어떻게 나누는지의 문제이며
 - MCP integration은 그 도구들을 **운영 가능한 방식으로 연결하고 노출하는지**의 문제다
 
 즉 MCP가 있다고 해서:
 - 도구 설명이 자동으로 좋아지지 않고
 - selection quality가 저절로 해결되지 않으며
-- [[concepts/tool-safety-boundaries|safety boundary]]가 자동으로 생기지도 않는다
+- [[concepts/tool-design/tool-safety-boundaries|safety boundary]]가 자동으로 생기지도 않는다
 
 하지만 MCP는 이런 요소들을 **더 일관되게 다룰 수 있는 운영 기반**을 제공한다.
 
@@ -149,7 +149,7 @@ MCP를 이해할 때 유용한 감각은,
 ## 흔한 오해
 
 ### “MCP를 쓰면 도구 선택 문제가 자동으로 해결된다”
-아니다. [[concepts/tool-selection-and-disambiguation|Selection]] 품질은 여전히 description과 schema 설계에 달려 있다.
+아니다. [[concepts/tool-design/tool-selection-and-disambiguation|Selection]] 품질은 여전히 description과 schema 설계에 달려 있다.
 
 ### “MCP는 그냥 API 래퍼다”
 그보다 넓다. 핵심은 표준화된 연결 계층이라는 점이다.

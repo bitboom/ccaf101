@@ -12,7 +12,7 @@ tags:
 
 ## Hooks란 무엇인가
 
-Hook은 [[concepts/agent-loop|Agent Loop]]의 특정 지점에 **프로그램적으로 개입하는 장치**다.  
+Hook은 [[concepts/agent-control/agent-loop|Agent Loop]]의 특정 지점에 **프로그램적으로 개입하는 장치**다.  
 즉 모델이 자유롭게 판단하도록 두는 대신, 시스템이 특정 단계에서 개입해:
 
 - 결과를 정리하거나
@@ -86,10 +86,10 @@ Hook은 [[concepts/agent-loop|Agent Loop]]의 특정 지점에 **프로그램적
 
 Hook은 agent loop의 여러 경계 지점에 들어갈 수 있다.
 
-- tool 실행 전 ([[concepts/tool-safety-boundaries|Tool Safety Boundaries]] 참고)
+- tool 실행 전 ([[concepts/tool-design/tool-safety-boundaries|Tool Safety Boundaries]] 참고)
 - tool 실행 후
 - 응답 생성 전
-- handoff 직전 ([[concepts/escalation-and-handoff-boundaries|Escalation & Handoff Boundaries]] 참고)
+- handoff 직전 ([[concepts/execution-safety/escalation-and-handoff-boundaries|Escalation & Handoff Boundaries]] 참고)
 
 즉 hook은 모델의 추론 자체를 대체하기보다,
 
@@ -245,10 +245,10 @@ OpenClaw 같은 런타임에서 hooks는 부가 기능이 아니라,
 
 ## 관련 개념
 
-- [[concepts/agent-loop|Agent Loop]] — hook이 개입하는 실행 루프
-- [[concepts/tool-safety-boundaries|Tool Safety Boundaries]] — 도구 호출에 대한 안전 경계 설계
-- [[concepts/ci-guardrails-and-review-boundaries|CI Guardrails & Review Boundaries]] — CI 파이프라인에서의 enforcement 패턴
-- [[concepts/claude-md-and-instruction-hierarchy|CLAUDE.md & Instruction Hierarchy]] — prompt guidance와 enforcement의 경계
+- [[concepts/agent-control/agent-loop|Agent Loop]] — hook이 개입하는 실행 루프
+- [[concepts/tool-design/tool-safety-boundaries|Tool Safety Boundaries]] — 도구 호출에 대한 안전 경계 설계
+- [[concepts/execution-safety/ci-guardrails-and-review-boundaries|CI Guardrails & Review Boundaries]] — CI 파이프라인에서의 enforcement 패턴
+- [[concepts/execution-safety/claude-md-and-instruction-hierarchy|CLAUDE.md & Instruction Hierarchy]] — prompt guidance와 enforcement의 경계
 
 ## 더 읽어보기
 

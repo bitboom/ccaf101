@@ -21,7 +21,7 @@ tags:
 - 충돌하는 정보가 정리되지 않았을 때
 - 정책/금전/권한 리스크가 커졌을 때
 - 사용자 의도 확인이 꼭 필요할 때
-- [[concepts/context-lifecycle-management|tool result가 불완전하거나 stale]]할 때
+- [[concepts/state-memory/context-lifecycle-management|tool result가 불완전하거나 stale]]할 때
 
 즉 escalation의 핵심은 “못 하겠다”가 아니라,
 
@@ -68,7 +68,7 @@ handoff boundary는
 - 왜 여기서 escalation이 필요한지
 - 다음 사람이 바로 판단할 수 있도록 필요한 핵심 맥락
 
-즉 좋은 handoff summary는 장황한 transcript가 아니라, [[concepts/compression-without-losing-meaning|의미를 보존한 채 압축]]된 신뢰 문맥이어야 한다.
+즉 좋은 handoff summary는 장황한 transcript가 아니라, [[concepts/state-memory/compression-without-losing-meaning|의미를 보존한 채 압축]]된 신뢰 문맥이어야 한다.
 
 ---
 
@@ -121,7 +121,7 @@ handoff에서 자주 생기는 문제는
 D5는 문맥을 오래 유지하는 법만이 아니라,
 그 문맥을 **언제 끊고 넘길 것인가**도 다룬다.
 
-아무리 좋은 [[concepts/compression-without-losing-meaning|압축]], 좋은 [[concepts/source-grounded-context-and-citation-fidelity|source fidelity]]가 있어도,
+아무리 좋은 [[concepts/state-memory/compression-without-losing-meaning|압축]], 좋은 [[concepts/state-memory/source-grounded-context-and-citation-fidelity|source fidelity]]가 있어도,
 handoff boundary가 없으면 에이전트는
 계속 문맥을 들고 더 멀리 가다가 신뢰를 잃을 수 있다.
 
@@ -139,7 +139,7 @@ handoff boundary가 없으면 에이전트는
 아니다. 계속 진행하는 리스크가 커질 때도 해야 한다.
 
 ### “handoff는 transcript를 그대로 넘기면 된다”
-그렇지 않다. [[concepts/compression-without-losing-meaning|의미를 보존한 압축]]된 구조화 맥락이 더 중요하다.
+그렇지 않다. [[concepts/state-memory/compression-without-losing-meaning|의미를 보존한 압축]]된 구조화 맥락이 더 중요하다.
 
 ### “애매한 부분은 정리해서 넘기는 게 좋다”
 오히려 불확실성을 지워버리면 다음 판단자가 잘못된 확신을 가질 수 있다.
