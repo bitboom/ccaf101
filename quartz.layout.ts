@@ -55,6 +55,10 @@ export const defaultContentPageLayout: PageLayout = {
         if (ko[node.slugSegment]) node.displayName = ko[node.slugSegment]
       },
       sortFn: (a, b) => {
+        // exam-overview(개요)를 항상 맨 위로
+        const isOverviewA = a.slugSegment === "exam-overview"
+        const isOverviewB = b.slugSegment === "exam-overview"
+        if (isOverviewA !== isOverviewB) return isOverviewA ? -1 : 1
         const folderOrder: Record<string, number> = {
           domains: 0,
           concepts: 1,
@@ -115,6 +119,10 @@ export const defaultListPageLayout: PageLayout = {
         if (ko[node.slugSegment]) node.displayName = ko[node.slugSegment]
       },
       sortFn: (a, b) => {
+        // exam-overview(개요)를 항상 맨 위로
+        const isOverviewA = a.slugSegment === "exam-overview"
+        const isOverviewB = b.slugSegment === "exam-overview"
+        if (isOverviewA !== isOverviewB) return isOverviewA ? -1 : 1
         const folderOrder: Record<string, number> = {
           domains: 0,
           concepts: 1,
