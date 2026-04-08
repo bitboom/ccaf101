@@ -1,5 +1,5 @@
 .DS_Store
-.venv/
-__pycache__/
-site/
-*:Zone.Identifier
+node_modules/
+public/
+.quartz-cache/
+*.Zone.Identifier

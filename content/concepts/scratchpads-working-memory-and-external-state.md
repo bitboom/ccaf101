@@ -1,0 +1,172 @@
+---
+title: "Scratchpads, Working Memory & External State"
+tags:
+  - state-memory
+  - domain-5
+---
+
+# Scratchpads, Working Memory & External State
+
+> 이 문서는 CCAF Domain 5를 이해하기 위한 **개념 설명용 노트**다.  
+> 여기서는 장기 실행의 일반론보다, **세션 내부 기억만으로 버티지 않고 외부 상태 구조를 함께 운영하는 방법**을 다룬다. 즉 scratchpad, progress file, manifest 같은 장치를 **state externalization architecture**로 이해하는 데 초점을 둔다.
+
+## 왜 외부 상태가 필요한가
+
+짧은 작업은 현재 문맥 창 안에서 충분히 다룰 수 있다.  
+하지만 긴 조사, 다단계 편집, 장기 실행 에이전트에서는 문제가 달라진다.
+
+시간이 길어질수록 이전 결정이 잊히고, 중간 산출물이 묻히고, 작업 목표가 [[concepts/reliability-patterns-for-long-running-agents|드리프트]]하고, [[concepts/context-lifecycle-management|stale]]한 기억과 최신 상태가 섞인다.
+
+즉 모델 내부 문맥만으로 모든 상태를 들고 가려 하면,
+결국 신뢰성이 흔들리기 쉽다.
+
+그래서 중요한 것은:
+
+> **기억을 더 오래 붙잡는 것이 아니라, 어떤 상태를 외부에 분리해 안정적으로 관리할 것인가**
+
+다.
+
+---
+
+## working memory와 external state는 어떻게 다른가
+
+### working memory
+현재 세션 안에서 바로 쓰는 살아 있는 문맥이다.
+
+예:
+- 지금 방금 읽은 파일 내용
+- 방금 나온 tool result
+- 현재 단계의 임시 판단
+- 직전의 대화 흐름
+
+이건 빠르고 유연하지만,
+길게 유지되기엔 불안정하다.
+
+### external state
+세션 바깥에 더 지속적으로 남기는 상태다.
+
+예:
+- progress file
+- task manifest
+- checkpoint note
+- scratchpad
+- [[concepts/escalation-and-handoff-boundaries|handoff]] memo
+
+이건 즉시성은 떨어질 수 있지만,
+장기 작업에서 더 안정적인 기준점이 된다.
+
+즉 핵심은:
+
+> **working memory는 빠르지만 휘발적이고, external state는 느릴 수 있지만 더 지속적이다**
+
+는 점이다.
+
+---
+
+## scratchpad는 무엇을 위한 것인가
+
+scratchpad는 완성된 문서가 아니다.  
+보통 아래 같은 것을 담는다.
+
+- 현재 작업 목표
+- 중간 판단
+- 아직 해결되지 않은 질문
+- 다음 단계 후보
+- 임시 분류나 메모
+- 이후 확인할 포인트
+
+즉 scratchpad는 최종 산출물이 아니라,
+
+> **작업 중간의 사고와 상태를 잃지 않기 위한 임시 외부 기억**
+
+에 가깝다.
+
+중요한 점은 scratchpad가 장황한 로그여야 한다는 게 아니라,
+**계속 이어갈 수 있는 최소한의 작업 기준점**이 되어야 한다는 것이다.
+
+---
+
+## progress file이나 manifest는 왜 유용한가
+
+장기 작업에서는 단순 메모보다
+조금 더 구조화된 외부 상태가 유용하다.
+
+예:
+- 무엇을 이미 끝냈는지
+- 무엇이 아직 미완인지
+- 어떤 결정이 내려졌는지
+- 어떤 파일이나 문서를 확인했는지
+- 다음 세션이 어디서 다시 시작해야 하는지
+
+이런 것을 manifest나 progress file에 남기면, 다음 [[concepts/session-management|세션]]이나 다른 에이전트가 작업을 이어받기 쉬워진다.
+
+즉 external state의 핵심은 저장 자체보다,
+
+> **작업 연속성을 복구 가능하게 만드는 것**
+
+이다.
+
+---
+
+## external state에는 무엇을 저장해야 하는가
+
+모든 것을 다 저장할 필요는 없다.  
+보통 가치가 큰 것은 다음과 같다.
+
+- 현재 목표
+- 핵심 결정
+- open question
+- 남은 TODO
+- 중요한 [[concepts/source-grounded-context-and-citation-fidelity|source pointer]]
+- 최신 상태를 반영하는 checkpoint
+- [[concepts/escalation-and-handoff-boundaries|handoff]] 시 바로 필요한 사실
+
+반대로 굳이 그대로 저장할 필요가 적은 것은:
+- 장황한 원본 transcript 전체
+- 이미 폐기된 시도
+- 현재 작업과 무관한 세부 탐색 흔적
+
+즉 external state는 로그 저장소가 아니라,
+
+> **작업을 이어가기 위한 핵심 상태 저장소**
+
+여야 한다.
+
+---
+
+## 왜 이게 reliability 문제인가
+
+외부 상태가 없으면,
+세션이 길어질수록 에이전트는 점점 더 많은 것을
+문맥 창 안에서만 기억하려고 한다.
+
+그 결과:
+- 중요한 상태를 잃고
+- 이미 한 일을 반복하고
+- stale한 결정을 다시 쓰고
+- 작업 연속성이 약해진다
+
+즉 scratchpad나 progress file은 편의 기능이 아니라,
+
+> **장기 실행에서 작업 연속성과 기준점을 지키는 reliability 장치**
+
+다.
+
+---
+
+## 흔한 오해
+
+### “외부 상태는 모델이 기억을 못해서 쓰는 보조수단이다”
+그보다 넓다. 긴 작업의 신뢰성을 높이는 운영 구조다.
+
+### “scratchpad는 장황할수록 좋다”
+아니다. 이어서 작업할 수 있을 만큼만 핵심이 살아 있으면 된다.
+
+### “문맥 창이 충분히 크면 외부 상태는 필요 없다”
+그렇지 않다. 길이보다 상태의 정리와 재접지가 더 중요할 수 있다.
+
+---
+
+## 한 문장 요약
+
+> **긴 작업의 신뢰성은 모델 내부 문맥만이 아니라, scratchpad·progress file·manifest 같은 external state를 어떻게 관리하느냐에 크게 좌우된다.**

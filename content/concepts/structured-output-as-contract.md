@@ -1,0 +1,200 @@
+---
+title: "Structured Output as Contract"
+tags:
+  - output-design
+  - domain-4
+---
+
+# Structured Output as Contract
+
+> 이 문서는 CCAF Domain 4를 이해하기 위한 **개념 설명용 노트**다.  
+> 여기서는 structured output을 단순 formatting이 아니라, **모델과 후속 시스템 사이에서 어떤 형식과 의미를 약속하는 계약(contract)** 으로 이해하는 데 초점을 둔다.
+
+## 왜 structured output을 contract로 봐야 하는가
+
+모델 출력이 사람이 읽기 좋기만 하면 충분한 경우도 있다.  
+하지만 시스템이 그 출력을:
+- 파싱하고
+- 검증하고
+- 후속 처리하고
+- 다른 단계의 입력으로 넘겨야 한다면
+
+이야기가 달라진다.
+
+이때 중요한 것은 “예쁘게 정리된 답변”이 아니라,
+
+> **후속 시스템이 어떤 형식과 의미를 신뢰해도 되는가**
+
+다.
+
+즉 structured output은 단순한 출력 스타일이 아니라,
+**모델과 시스템 사이의 약속**에 가깝다.
+
+---
+
+## 자유 텍스트와 structured output은 무엇이 다른가
+
+자유 텍스트는 유연하다.  
+하지만 그만큼 해석의 여지도 많다.
+
+예를 들어 모델이 이렇게 답했다고 해보자.
+
+> “우선순위는 높고, 고객 영향이 있으며, 수정이 필요합니다.”
+
+사람은 이해할 수 있다.  
+하지만 시스템 입장에서는 아래가 애매하다.
+
+- “높음”이 정확히 어떤 값인가?
+- 고객 영향은 boolean인가, severity인가?
+- 수정 필요는 recommendation인가, required action인가?
+
+반면 [[concepts/structured-outputs-and-error-design|structured output]]은 이런 해석 여지를 줄인다.
+
+```json
+{
+  "priority": "high",
+  "customerImpact": true,
+  "action": "fix_required"
+}
+```
+
+즉 차이는 단순히 JSON이냐 아니냐가 아니라,
+
+> **출력의 의미가 해석에 의존하는가, 아니면 계약된 구조 안에 들어 있는가**
+
+에 있다.
+
+---
+
+## contract라는 말이 중요한 이유
+
+structured output을 contract로 보는 순간,
+질문이 달라진다.
+
+단순히:
+- “어떤 형식으로 내보낼까?”가 아니라
+
+이제는:
+- 어떤 필드가 반드시 있어야 하는가
+- 어떤 값의 범위를 허용할 것인가
+- 누락되면 무엇이 실패로 간주되는가
+- downstream system은 무엇을 전제로 삼아도 되는가
+
+를 함께 생각하게 된다.
+
+즉 contract 관점은 출력 포맷을 꾸미는 관점이 아니라,
+
+> **출력 신뢰성의 경계를 정의하는 관점**
+
+이다.
+
+---
+
+## 왜 이것이 reliability 문제인가
+
+출력이 contract가 아니면,
+후속 시스템은 모델의 의도를 계속 추측해야 한다.
+
+그러면 다음 문제가 생긴다.
+
+- 파서가 불안정해진다
+- 필드 누락을 늦게 발견한다
+- 값의 의미가 호출마다 흔들린다
+- 예외 처리가 복잡해진다
+- [[concepts/validation-repair-and-retry-loops|validation과 repair]]가 어려워진다
+
+즉 output contract가 약하면,
+문제는 “예쁘지 않음”이 아니라,
+
+> **시스템 전체의 신뢰성이 흔들린다**
+
+는 데 있다.
+
+---
+
+## 좋은 output contract는 무엇을 포함하는가
+
+좋은 contract는 보통 아래를 분명히 한다.
+
+- 어떤 필드가 필요한가
+- 어떤 필드는 선택적인가
+- 어떤 값의 타입과 범위를 가지는가
+- 어떤 경우가 유효한 출력인가
+- 실패나 불확실성은 어떻게 표현하는가
+
+즉 좋은 structured output은 단순히 항목을 나열하는 게 아니라,
+
+> **무엇을 기대할 수 있고 무엇을 기대하면 안 되는지까지 드러내는 구조**
+
+다.
+
+---
+
+## structured output은 항상 JSON이어야 하는가
+
+꼭 그렇지는 않다.  
+중요한 것은 JSON 자체가 아니라 **구조가 계약으로 작동하느냐**다.
+
+즉 경우에 따라:
+- JSON
+- XML
+- 표 형식
+- key-value 구조
+- 스키마가 있는 YAML
+
+등도 가능하다.
+
+하지만 실무와 시험에서는 대개 JSON/스키마 기반 예시가 많이 나오기 때문에,
+JSON이 대표적 사례처럼 보이는 것이다.
+
+핵심은 형식 자체보다,
+
+> **출력이 기계적으로 기대 가능한 구조를 가지는가**
+
+에 있다.
+
+---
+
+## 왜 D4의 출발점이 이 문서여야 하는가
+
+D4를 그냥 “schema 쓰는 법”으로 시작하면 좁아진다.  
+schema는 중요한데, 그보다 먼저:
+
+> **왜 애초에 출력에 계약이 필요하냐**
+
+를 이해해야 한다.
+
+이걸 먼저 잡아야
+- [[concepts/schema-design-for-reliability|schema design]]
+- [[concepts/few-shot-patterns-for-output-consistency|few-shot consistency]]
+- [[concepts/validation-repair-and-retry-loops|validation / repair]]
+- [[concepts/batch-generation-strategy|batch generation]]
+- [[concepts/human-readable-vs-machine-usable-outputs|human vs machine output]]
+
+도 전부 같은 축으로 묶인다.
+
+즉 이 문서는 D4 전체를
+“출력 포맷 팁”이 아니라
+
+> **출력 신뢰성 설계(output reliability design)**
+
+로 격상시키는 출발점이다.
+
+---
+
+## 흔한 오해
+
+### “structured output은 보기 좋게 정리된 출력이다”
+아니다. 핵심은 장식이 아니라 계약이다.
+
+### “사람이 이해할 수 있으면 충분하다”
+그렇지 않다. 후속 시스템이 소비한다면 구조적 신뢰성이 필요하다.
+
+### “JSON으로 내면 structured output 문제는 끝난다”
+아니다. JSON도 contract가 약하면 여전히 불안정하다.
+
+---
+
+## 한 문장 요약
+
+> **Structured output은 예쁜 형식이 아니라, 모델과 시스템 사이에서 출력의 형식과 의미를 약속하는 계약이다.**

@@ -21,25 +21,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
+        run: npm ci
+
+      - name: Build Quartz
+        run: npx quartz build
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Build site
-        run: mkdocs build
-
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: public
 
   deploy:
     environment:
